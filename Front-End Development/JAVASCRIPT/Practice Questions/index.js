@@ -158,3 +158,57 @@ let productTitle = prompt("product Title")
 let quantity = prompt("Quantity Of " + productTitle)
 
 console.log(`${visitorName} Buy ${quantity} ${productTitle} From Xyz Store`);
+
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+
+// Chapter 4
+
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+
+// Sure, here's how you can achieve these tasks in JavaScript:
+
+// 1. Declare 3 variables in one statement:
+// var a, b, c;
+
+// 2. Declare 5 legal & 5 illegal variable names:
+
+// Legal variable names:
+// var myVariable;
+// var $price;
+// var _counter;
+// var camelCaseVariable;
+// var thisIsALongVariableName;
+
+// Illegal variable names:
+// var 123variable; // Cannot start with a number
+// var my-variable; // Hyphens are not allowed
+// var var; // Reserved keyword
+// var my variable; // Space is not allowed
+// var !notAllowed; // Special characters except $ and _ are not allowed
+// ```
+
+// 3. Display this in your browser:
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>JavaScript Variables</title>
+// </head>
+// <body>
+//     <h1>Rules for naming JS variables</h1>
+//     <p>a) Variable names can only contain letters, digits, underscores, and dollar signs.</p>
+//     <p>For example $my_1stVariable</p>
+//     <p>b) Variables must begin with a letter, underscore, or dollar sign.</p>
+//     <p>For example $name, _name, or name</p>
+//     <p>c) Variable names are case-sensitive.</p>
+//     <p>d) Variable names should not be JS keywords.</p>
+
+//     <script>
+//         // JavaScript code goes here
+//     </script>
+// </body>
+// </html>
+// You can copy this code into an HTML file and open it in your browser to see the displayed rules.
