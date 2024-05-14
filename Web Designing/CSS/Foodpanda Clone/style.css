@@ -1,0 +1,310 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+
+}
+
+body {
+  font-family: arial;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+.template {
+  width: 1190px;
+  margin: 0 auto;
+}
+.navBar {
+  box-shadow: 0px 0px 9px -6px;
+}
+.nav {
+  width: 1330px;
+  margin: 0 auto;
+  height: 64px;
+  position: sticky;
+}
+.navLeft {
+  float: left;
+  display: inline-block;
+}
+.navRight {
+  float: right;
+}
+.navRightElement {
+  display: inline-block;
+  padding: 23px 23px;
+  border-left: 1px solid #ddd;
+}
+.navLeft img {
+  margin-top: 13px;
+}
+.blackColor {
+  color: #333;
+}
+.pinkColor {
+  color: rgb(214, 12, 99);
+}
+.navRightElement i {
+  font-size: 20px;
+}
+.searchPart {
+  height: 510px;
+  background: url('../images/bg-search.PNG');
+  background-repeat: no-repeat;
+}
+.searchContent h1 {
+  font-weight: normal;
+  font-size: 38px;
+  padding-top: 100px;
+  letter-spacing: 2px;
+
+}
+.search {
+  width: 959px;
+  height: 95px;
+  box-shadow: 0px 0px 10px -7px;
+  margin-top: 82px;
+  background: #fff;
+}
+.search input[type=search] {
+  width: 753px;
+  height: 59px;
+  margin: 18px 15px;
+  padding-left: 15px;
+  border: 1px solid #ddd;
+}
+.findPart {
+  display: inline-block;
+  background: rgb(214, 12, 99);
+  color: #fff;
+  padding: 20px 10px;
+  font-weight: bold;
+}
+.titleBig {
+  color: #F5F5F5;
+  font-size: 10rem;
+}
+.titleSmall {
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.imageAll {
+  margin-top: 28px;
+}
+.imageAll img {
+  width: 280px;
+  height: 274px;
+}
+.separateImage {
+  display: inline-block;
+  margin-right: 19px;
+}
+.separateImage:nth-last-child(1) {
+  margin-right: 0px;
+}
+.separateImage figcaption {
+  font-weight: bold;
+  font-size: 22px;
+  color: #fff;
+  margin: -40px 0 0 18px;
+}
+.appPart {
+  margin-top: 190px;
+}
+.appPartColor {
+  height: 359px;
+  background: #D70F64;
+  color: #FFFFFF;
+  margin-top: 35px;
+  position: relative;
+}
+.appPartColor h2 {
+  padding-top: 80px;
+  padding-bottom: 25px;
+}
+.middleSizeText {
+  letter-spacing: 0.5px;
+  font-size: 15.5px;
+  color: #707070;
+  line-height: 25px;
+
+}
+.appPartColor img {
+  margin-top: 70px;
+}
+.mobileImage {
+  height: 600px;
+  width: 680px;
+  position: absolute;
+  top: -173px;
+  right: 0px;
+}
+.officePart {
+  margin-top: 175px;
+}
+.officeContent {
+  height: 432px;
+  background: url('../images/home-corporate-bd.jpg') center center;
+  background-size: cover;
+  position: relative;
+  margin-top: 24px;
+}
+.officeMiddle {
+  width: 533px;
+  height: 180px;
+  background: #fff;
+  position: absolute;
+  left: 80px;
+  top: 262px;
+  padding: 34px 32px;
+  box-shadow: 0 0 19px -12px;
+}
+.pad32 {
+  padding-bottom: 32px;
+}
+.getStart {
+  background: rgb(214, 12, 99);
+  color: #fff;
+  font-weight: bold;
+  margin: 38px 0 0 291px;
+  padding: 17px 72px;
+}
+.details {
+  padding: 205px 0 40px;
+  border-bottom: 1px solid #ddd;
+}
+.details h3 {
+  padding-bottom: 32px;
+  font-size: 18px;
+}
+.details button {
+  margin-top: 20px;
+  border: none;
+  background: #fff;
+  padding: 25px;
+}
+.subscribePart {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 50px;
+}
+.subscribePart h4 {
+  padding-bottom: 17px;
+}
+.commonFormSize {
+  border: none;
+  padding: 16px;
+}
+.subscribePart select {
+  border: 1px solid #ddd;
+  width: 240px;
+  color: #707070;
+}
+.subscribePart input[type=email] {
+  border: 1px solid #ddd;
+  color: #707070;
+  width: 380px;
+}
+.subscribePart button {
+  border: 1px solid #ddd;
+  width: 323px;
+  background: rgb(214, 12, 99);
+  color: #fff;
+  font-weight: bold;
+}
+.scRight {
+  float: right;
+}
+.socialImg {
+  padding-bottom: 39px;
+  border-bottom: 1px solid #ddd;
+}
+.copyrightPart {
+  padding: 30px 0 60px;
+  font-size: 14.5px;
+  border-bottom: 1px solid #ddd;
+}
+.copyRight ul{
+  list-style: none;
+}
+.copyRight li {
+  display: inline-block;
+  margin-left: 8px;
+  line-height: 21px;
+}
+.copyLeft {
+  width: 50%;
+  display: inline-block;
+}
+.copyRight {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+.delivery {
+  width: 32.33%;
+  float: left;
+  margin-top: 28px;
+  margin-right: 15px;
+  margin-bottom: 59px;
+}
+.delivery:nth-last-child(1) {
+  margin-right: 0;
+}
+.deliveryMarTop {
+  margin-top: 24px;
+}
+.deliveryInner {
+  color: #707070;
+}
+.deliveryInner p {
+  word-spacing: 4px;
+  line-height: 22px;
+}
+.othersPart {
+  margin-top: 217px;
+  padding-bottom: 128px;
+  border-bottom: 1px solid #ddd;
+}
+.othersPart ul {
+  list-style: none;
+}
+.othersEach {
+  width: 297.5px;
+  display: inline-block;
+  float: left;
+}
+.othersEach li {
+  color: rgb(214, 12, 99);
+  margin-bottom: 4px;
+}
+.othersPart h3 {
+  margin-bottom: 25px;
+}
+.footer {
+  padding: 59px 0 18px 0;
+  border-bottom: 1px solid #ddd;
+}
+.footer ul {
+  list-style: none;
+  text-align: center;
+  color: #707070;
+}
+.footer li {
+  display: inline-block;
+  padding: 0 5px;
+  border-right: 1px solid;
+}
+.footer li:nth-last-child(1) {
+  border-right: none;
+}
+.Space {
+  height: 120px;
+}

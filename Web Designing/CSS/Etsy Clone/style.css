@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px 90px;
+}
+
+.navbar .logo img {
+  width: 80px;
+}
+
+.navbar .input input {
+  width: 750px;
+  height: 40px;
+  padding-left: 18px;
+  border-radius: 24px;
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0);
+  flex: 1;
+}
+
+.navbar .input button {
+  font-size: 20px;
+}
+
+.navbar .icons i {
+  margin: 10px;
+}
+
+.navbar .category p {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.navbar .login p {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.navbar-footer {
+  border-bottom: 1px solid #2222;
+}
+.navbar-footer ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 90px;
+}
+
+.navbar-footer ul li {
+  list-style-type: none;
+  margin-right: 50px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cont1 {
+  text-align: center;
+  width: 100%;
+  height: 350px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cont1 .image {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cont1 .para h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.cont1 .image .box{
+    margin-top: 40px    ;
+    margin-right: 70px;
+}
+
+
+.cont1 .image .box img{
+    border-radius: 50%;
+    width: 140px;
+
+}
+
+.cont2{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 100px;
+}
+
+.cont2 .h1 h1{
+    font-weight: 500;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.cont2 .card {
+    width: 250px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    }
+
+.cont2 .card .cards {
+    margin: 10px;   
+    padding: 10px;
+    border-radius: 15px;
+    transition: .3s linear;
+}
+
+.cont2 .card .cards:hover {
+    box-shadow: 0px 0px 5px black;
+    
+}
+
+.cont2 .card .cards h3{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.cont2 .card .cards .rating, .cont2 .card .cards .price{
+    display: flex;
+    align-items: center;
+}
+
+.cont2 .card .cards .price p{
+    margin-left: 4px;
+    font-size: 12px;
+    color: #0F743B;
+}
+.cont2 .card .cards p{
+    display: flex;
+}
+
+.cont2 .card .cards .main{
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.cont2 .card .cards .rating img{
+    width: 70px;
+    display: flex;
+}
+
+.cont3{
+    margin: 60px 0px;
+}
