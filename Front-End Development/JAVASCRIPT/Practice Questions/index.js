@@ -153,11 +153,11 @@
 // b. Product title
 // c. Quantity i.e. how many products a visitor wants to order
 
-let visitorName = prompt("Visitor’s Name")
-let productTitle = prompt("product Title")
-let quantity = prompt("Quantity Of " + productTitle)
+// let visitorName = prompt("Visitor’s Name")
+// let productTitle = prompt("product Title")
+// let quantity = prompt("Quantity Of " + productTitle)
 
-console.log(`${visitorName} Buy ${quantity} ${productTitle} From Xyz Store`);
+// console.log(`${visitorName} Buy ${quantity} ${productTitle} From Xyz Store`);
 
 // ------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------
@@ -212,3 +212,178 @@ console.log(`${visitorName} Buy ${quantity} ${productTitle} From Xyz Store`);
 // </body>
 // </html>
 // You can copy this code into an HTML file and open it in your browser to see the displayed rules.
+
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+
+// Chapter 5
+
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+
+// Write a program that take two numbers & add them in a new variable. Show the result in your browser.
+
+// let userInput1 = +prompt("Enter Value 1", 0);
+// let userInput2 = +prompt("Enter Value 2", 0);
+
+// console.log(
+//   `Sum Of ${userInput1} & ${userInput2} is ${userInput1 + userInput2}`
+// );
+
+// Repeat task1 for subtraction, multiplication, division & modulus.
+
+// let userInput1 = +prompt("Enter Value 1", 0);
+// let userInput2 = +prompt("Enter Value 2", 0);
+
+// console.log(
+//   `Sum Of ${userInput1} & ${userInput2} is ${userInput1 - userInput2}`
+// );
+
+// let userInput1 = +prompt("Enter Value 1", 0);
+// let userInput2 = +prompt("Enter Value 2", 0);
+
+// console.log(
+//   `Sum Of ${userInput1} & ${userInput2} is ${userInput1 * userInput2}`
+// );
+
+// let userInput1 = +prompt("Enter Value 1", 0);
+// let userInput2 = +prompt("Enter Value 2", 0);
+
+// console.log(
+//   `Sum Of ${userInput1} & ${userInput2} is ${userInput1 / userInput2}`
+// );
+
+// 3. Do the following using JS Mathematic Expressions
+// a. Declare a variable.
+// let abc = "xyz";
+// b. Show the value of variable in your browser like “Value after variable declaration is: ??”.
+// console.log(`Value after variable declaration is: ${abc}`);
+// c. Initialize the variable with some number.
+// abc = 5
+// d. Show the value of variable in your browser like “Initial value: 5”.
+// console.log(`Initial value: ${abc}`);
+// e. Increment the variable.
+// abc = ++abc
+// f. Show the value of variable in your browser like “Value after increment is: 6”.
+// console.log(`Value after increment is: ${abc}`);
+// g. Add 7 to the variable.
+// abc = abc + 7
+// h. Show the value of variable in your browser like “Value MATH EXPRESSIONS | JAVASCRIPT after addition is: 13”.
+// console.log(`Value MATH EXPRESSIONS | JAVASCRIPT after addition is: ${abc}`);
+// i. Decrement the variable.
+// abc = --abc
+// j. Show the value of variable in your browser like “Value after decrement is: 12”.
+// console.log(`Value after decrement is: ${abc}`);
+// k. Show the remainder after dividing the variable’s value by 3.
+// abc = abc %3
+// l. Output : “The remainder is : 0”.
+// console.log(`The remainder is : ${abc}`);
+
+// Cost of one movie ticket is 600 PKR. Write a script to store ticket price in a variable & calculate the cost of buying 5 tickets to a movie. Example output:
+
+// let ticketPrice = 600
+// let kitniKhareeedi = prompt('kitni Khareeedi?', 1)
+// console.log(`After Buying ${kitniKhareeedi} Tickets Your Price is ${ticketPrice * kitniKhareeedi}.`);
+
+// Write a script to display multiplication table of any number in your browser.
+
+// let konsaTable = prompt("konsa Table", 1);
+// let tableNum = 1;
+// document.write(`
+// Table is ${konsaTable} <br>
+// ${konsaTable} x ${tableNum} = ${konsaTable * tableNum} <br>
+// ${konsaTable} x ${++tableNum} = ${konsaTable * tableNum} <br>
+// ${konsaTable} x ${++tableNum} = ${konsaTable * tableNum} <br>
+// ${konsaTable} x ${++tableNum} = ${konsaTable * tableNum} <br>
+// ${konsaTable} x ${++tableNum} = ${konsaTable * tableNum} <br>
+// ${konsaTable} x ${++tableNum} = ${konsaTable * tableNum} <br>
+// ${konsaTable} x ${++tableNum} = ${konsaTable * tableNum} <br>
+// ${konsaTable} x ${++tableNum} = ${konsaTable * tableNum} <br>
+// ${konsaTable} x ${++tableNum} = ${konsaTable * tableNum} <br>
+// ${konsaTable} x ${++tableNum} = ${konsaTable * tableNum} <br>
+// `);
+
+// 7. Write a program to implement checkout process of a shopping cart system for an e-commerce website. Store the following in variables
+// a. Price of item 1
+// b. Price of item 2
+// c. Ordered quantity of item 1
+// d. Ordered Quantity of item 2
+// e. Shipping charges
+// Compute the total cost & show the receipt in your browser.
+
+// let item1 = 400
+// let item2 = 550
+// let item3 = 720
+
+// let quantityOfItem1 = 3
+// let quantityOfItem2 = 15
+// let quantityOfItem3 = 2
+
+// let totalPrice = item1*quantityOfItem1 + item2*quantityOfItem2 + item3*quantityOfItem3
+
+// document.write(`
+// You Buy ${quantityOfItem1} Item1. Total Price Of Item1 ${item1*quantityOfItem1} <br>
+// You Buy ${quantityOfItem2} Item2. Total Price Of Item2 ${item2*quantityOfItem2} <br>
+// You Buy ${quantityOfItem3} Item3. Total Price Of Item3 ${item3*quantityOfItem3} <br>
+// Total Price Of All Item Is ${totalPrice} <br>
+// After 10% Off Your Price is ${totalPrice - (totalPrice / 10)}
+// `)
+
+// Store total marks & marks obtained by a student in 2 variables. Compute the percentage & show the result in your browser
+
+// let totalMarks = 500;
+// let obtainedMarks = 360;
+// let percentage = (obtainedMarks * 100) / totalMarks;
+// console.log(percentage+"%");
+
+// Assume we have 10 US dollars & 25 Saudi Riyals. Write a script to convert the total currency to Pakistani Rupees. Perform all calculations in a single expression. (Exchange rates : 1 US Dollar = 104.80 Pakistani Rupee and 1 Saudi Riyal = 28 Pakistani Rupee)
+
+// let totalUSDAvai = prompt("total USD Available", 10);
+
+// console.log(
+//   `After Converting Your ${totalUSDAvai}$ in Pakistani Rupee Your Price Is ${
+//     totalUSDAvai * 277.65
+//   }`
+// );
+
+// Write a program to initialize a variable with some number and do arithmetic in following sequence:
+// a. Add 5
+// b. Multiply by 10
+// c. Divide the result by 2
+// Perform all calculations in a single expression
+
+// let num1 = 30;
+// num1 = num1 + 5;
+// num1 = num1 * 10;
+// num1 = num1 / 2;
+// document.write(`
+// After Adding 5:<b> ${(num1 = num1 + 5)}</b> <br>
+// Multiply by 10:<b> ${(num1 = num1 * 10)}</b> <br>
+// Divide the result by 2:<b> ${(num1 = num1 / 2)}</b> <br>
+// `);
+
+// The Age Calculator: Forgot how old someone is? Calculate it!
+// a. Store the current year in a variable.
+// b. Store their birth year in a variable.
+// c. Calculate their 2 possible ages based on the stored values.
+// Output them to the screen like so: “They are either NN or NN years old”.
+
+// let currentYear = 2024
+// let birthYear = 2008
+// console.log(`Your Age Is ${currentYear - birthYear}`);
+
+
+// The Lifetime Supply Calculator: Ever wonder how much a “lifetime supply” of your favorite snack is? Wonder no more.
+// a. Store your favorite snack into a variable
+let favorite = "Cake"
+// b. Store your current age into a variable.
+let currentAge = 15
+// c. Store a maximum age into a variable.
+let maximumAge = 60
+// d. Store an estimated amount per day (as a number).
+let maximumInOneDay = 3
+// e. Calculate how many would you eat total for the rest of your life.
+console.log(`Apko Abhi ${(maximumAge - currentAge) * 365} ${favorite} Aur Khane He`);
+// Output the result to the screen like so: “You will need // NNNN to last you until the ripe old age of NN”.
