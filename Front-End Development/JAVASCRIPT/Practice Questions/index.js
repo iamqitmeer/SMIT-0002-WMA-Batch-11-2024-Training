@@ -374,18 +374,17 @@
 // let birthYear = 2008
 // console.log(`Your Age Is ${currentYear - birthYear}`);
 
-
 // The Lifetime Supply Calculator: Ever wonder how much a “lifetime supply” of your favorite snack is? Wonder no more.
 // a. Store your favorite snack into a variable
-let favorite = "Cake"
+// let favorite = "Cake"
 // b. Store your current age into a variable.
-let currentAge = 15
+// let currentAge = 15
 // c. Store a maximum age into a variable.
-let maximumAge = 60
+// let maximumAge = 60
 // d. Store an estimated amount per day (as a number).
-let maximumInOneDay = 3
+// let maximumInOneDay = 3
 // e. Calculate how many would you eat total for the rest of your life.
-console.log(`Apko Abhi ${(maximumAge - currentAge) * 365} ${favorite} Aur Khane He`);
+// console.log(`Apko Abhi ${(maximumAge - currentAge) * 365} ${favorite} Aur Khane He`);
 // Output the result to the screen like so: “You will need // NNNN to last you until the ripe old age of NN”.
 
 // ------------------------------------------------------------------------------------
@@ -397,3 +396,100 @@ console.log(`Apko Abhi ${(maximumAge - currentAge) * 365} ${favorite} Aur Khane 
 // ------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------
+
+// Write a program to take a number in a variable, do the required arithmetic to display the following result in your browser:
+
+// let num = 10
+
+// document.write('Result' + '<br>')
+// document.write(`Current Value is ${num} <br>`)
+// document.write('.........................................' + '<br>' + '<br>')
+// document.write(`The Value Of ++number is: ${++num} <br>`)
+// document.write(`Now the Value is ${num} <br>`)
+// document.write('.........................................' + '<br>' + '<br>')
+// document.write(`The Value Of number++ is: ${num++} <br>`)
+// document.write(`Now the Value is ${num} <br>`)
+// document.write('.........................................' + '<br>' + '<br>')
+// document.write(`The Value Of --number is: ${--num} <br>`)
+// document.write(`Now the Value is ${num} <br>`)
+// document.write('.........................................' + '<br>' + '<br>')
+// document.write(`The Value Of number-- is: ${num--} <br>`)
+// document.write(`Now the Value is ${num} <br>`)
+
+// What will be the output in variables a, b & result after execution of the following script:
+// var a = 2, b = 1;
+// var result = --a - --b + ++b + b--;
+// Explain the output at each stage:
+// --a;
+// --a - --b;
+// --a - --b + ++b;
+// --a - --b + ++b + b--;
+
+// var a = 2;
+// var b = 1;
+// // var result = --a - --b + ++b + b--;
+// //   1  -  0   +  1  +  1
+// console.log(result); // 3
+
+// Write a program that takes input a name from user & greet the user.
+
+// let userInput = prompt("Enter Your Name")
+// console.log("Hello, " + userInput);
+
+// Write a program to take input a number from user & display it’s multiplication table on your browser. If user does not enter a new number, multiplication table of 5 should be displayed by default.
+
+// let userNumber = prompt("Enter Table No.." , 5)
+// for (let i = 1; i <= 10; i++) {
+// document.write(`${userNumber} x ${i} = ${userNumber * i} <br>`)
+// }
+
+// Take
+// a) Take three subjects name from user and store them in 3 different variables.
+// let sub1 = "Chemistry";
+// let sub2 = "Biology";
+// let sub3 = "English";
+// // b) Total marks for each subject is 100, store it in another variable.
+// let totalNum = 100;
+// // c) Take obtained marks for first subject from user and stored it in different variable.
+// let sub1Num = +prompt("Enter " + sub1 + " Number");
+// // d) Take obtained marks for remaining 2 subjects from user and store them in variables.
+// let sub2Num = +prompt("Enter " + sub2 + " Number");
+// let sub3Num = +prompt("Enter " + sub3 + " Number");
+
+// let bothSum = sub1Num + sub2Num + sub3Num
+// // e) Now calculate total marks and percentage and show the result in browser like this.(Hint: user table)
+// document.write(`
+// <table border="1">
+// <p>All Subjects Total & Obtained Marks With Percentage</p>
+// <tr>
+//     <td>Subjects</td>
+//     <td>Total Marks</td>
+//     <td>Obtained Marks</td>
+//     <td>Percentage</td>
+// </tr>
+// <tr>
+//     <td>${sub1}</td>
+//     <td>${totalNum}</td>
+//     <td>${sub1Num}</td>
+//     <td>${(sub1Num * 100) / totalNum}%</td>
+// </tr>
+// <tr>
+//     <td>${sub2}</td>
+//     <td>${totalNum}</td>
+//     <td>${sub2Num}</td>
+//     <td>${(sub2Num * 100) / totalNum}%</td>
+// </tr>
+// <tr>
+//     <td>${sub3}</td>
+//     <td>${totalNum}</td>
+//     <td>${sub3Num}</td>
+//     <td>${(sub3Num * 100) / totalNum}%</td>
+// </tr>
+// <tr>
+// <td></td>
+// <td>${totalNum * 3}</td>
+// <td>${bothSum}</td>
+// <td>${Math.ceil(bothSum * 100 / 300)}%</td>
+// </tr>
+// </table>
+// `);
