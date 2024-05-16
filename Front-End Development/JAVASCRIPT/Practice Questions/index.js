@@ -498,7 +498,7 @@
 // ------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------
 
-// Chapter 6 TO 9
+// Chapter 9 TO 11
 
 // ------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------
@@ -674,3 +674,166 @@
 // if (operation == "-") console.log(first - sec);
 // if (operation == "/") console.log(first / sec);
 // if (operation == "*") console.log(first * sec);
+
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+
+// Chapter 12 TO 13
+
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+
+// Write a program that takes a character (number or string) in a variable & checks whether the given input is a number, uppercase letter or lower case letter. (Hint: ASCII codes:- A=65, Z=90, a=97, z=122).
+
+// Write a JavaScript program that accept two integers and display the larger. Also show if the two integers are equal.
+
+// let num1 = prompt("Enter number 1")
+// let num2 = prompt("Enter number 2")
+
+// if (num1 == num2) {
+//     console.log("Both Same");
+// }else if (num1 > num2) {
+//     console.log("Number 1 Is Larger");
+// }else if (num1 < num2) {
+//     console.log("Number 2 Is Larger");
+// }
+
+// Write a program that takes input a number from user & state whether the number is positive, negative or zero.
+
+// let num1 = +prompt("Enter number 1")
+
+// if (num1 == 0) {
+//     console.log("Is 0");
+// }else if (num1 > 0) {
+//     console.log("Is Positive");
+// }else if (num1 < 0) {
+//     console.log("Is Negative");
+// }
+
+// Write a program that takes a character (i.e. string of length 1) and returns true if it is a vowel, false otherwise
+
+// let str = "ello World";
+
+// if (
+//   str[0] == "a" ||
+//   str[0] == "e" ||
+//   str[0] == "i" ||
+//   str[0] == "o" ||
+//   str[0] == "u"
+// ) {
+//   console.log("First Word is a Vowel");
+// } else {
+//   console.log("First Word is Not Vowel");
+// }
+
+// Write a program that
+// a. Store correct password in a JS variable.
+// b. Asks user to enter his/her password
+// c. Validate the two passwords:
+// i. Check if user has entered password. If not, then give message “ Please enter your password”
+// ii. Check if both passwords are same. If they are same, show message “Correct! The password you entered matches the original password”. Show “Incorrect password” otherwise.
+
+// let pass = "123@Qitmeer";
+
+// let password = prompt("Enter password");
+// let confirmPassword = prompt("Enter Confirm password");
+// if (password == confirmPassword) {
+//   console.log(
+//     "Correct! The password you entered matches the original password"
+//   );
+// } else {
+//   console.log("Incorrect password");
+// }
+
+// . This if/else statement does not work. Try to fix it:
+// var greeting;
+// var hour = 13;
+// if (hour < 18) {
+// greeting = "Good day";
+// else
+// greeting = "Good evening";
+// }
+
+// var greeting;
+// var hour = 13;
+// if (hour < 18) {
+//   greeting = "Good day";
+// } else {
+//   greeting = "Good evening";
+// }
+
+// console.log(greeting);
+
+// Write a program that takes time as input from user in 24 hours clock format like: 1900 = 7pm. Implement the following case using if, else & else if statements
+
+// let timeAbc = +prompt("Enter Time");
+// if (timeAbc >= 0 && timeAbc < 1200) {
+//   console.log("Good, Morning");
+// } else if (timeAbc >= 1200 && timeAbc < 1700) {
+//   console.log("Good, Afternoon");
+// } else if (timeAbc >= 1700 && timeAbc < 2100) {
+//   console.log("Good, Evening");
+// } else if (timeAbc >= 2100 && timeAbc < 2359) {
+//   console.log("Good, Night");
+// }
+
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+
+// Chapter 14 TO 16
+
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+
+// Declare an empty array using JS literal notation to store student names in future.
+
+// let arr = [];
+// arr.push("Moavia");
+// arr.push("Inam");
+// arr.push("Zareena");
+// arr.push("Safia");
+// console.log(arr);
+
+// Declare and initialize a strings array.
+
+// const stringsArray = ["apple", "banana", "orange", "grape"];
+// console.log(stringsArray);
+
+// Declare and initialize a numbers array:
+
+// const numbersArray = [1, 2, 3, 4, 5];
+// console.log(numbersArray); // Output: [1, 2, 3, 4, 5]
+
+// Declare and initialize a boolean array:
+
+// const booleanArray = [true, false, true, true];
+// console.log(booleanArray); // Output: [true, false, true, true]
+
+// Declare and initialize a mixed array:
+
+// const mixedArray = ["apple", 10, true, "banana", false];
+// console.log(mixedArray);
+
+// let arr = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+// let num = 0
+
+// document.write(`
+// <h3>Qualification:</h3>
+// <ol>
+// <li>${arr[num++]}</li>
+// <li>${arr[num++]}</li>
+// <li>${arr[num++]}</li>
+// <li>${arr[num++]}</li>
+// <li>${arr[num++]}</li>
+// <li>${arr[num++]}</li>
+// <li>${arr[num++]}</li>
+// <li>${arr[num++]}</li>
+// <li>${arr[num++]}</li>
+// <ol>
+// `)
+
+// Write a program to store 3 student names in an array.Take another array to store score of these three students. Assume that total marks are 500 for each student, display the scores & percentages of students like:
