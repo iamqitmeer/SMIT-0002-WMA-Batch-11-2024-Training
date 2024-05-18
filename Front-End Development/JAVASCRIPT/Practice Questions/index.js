@@ -837,3 +837,61 @@
 // `)
 
 // Write a program to store 3 student names in an array.Take another array to store score of these three students. Assume that total marks are 500 for each student, display the scores & percentages of students like:
+
+// let studentsName = ["Qitmeer", "Raza", "Rizwan"];
+// let studentsMarks = [321, 401, 292];
+// let totalMarks = 500;
+// document.write(`
+// Score Of ${studentsName[0]} is ${studentsMarks[0]} & Percentage is ${
+//   (studentsMarks[0] * 100) / totalMarks
+// }<br>
+// Score Of ${studentsName[1]} is ${studentsMarks[1]} & Percentage is ${
+//   (studentsMarks[1] * 100) / totalMarks
+// }<br>
+// Score Of ${studentsName[2]} is ${studentsMarks[2]} & Percentage is ${
+//   (studentsMarks[2] * 100) / totalMarks
+// }
+// `);
+
+// Initialize an array with color names. Display the array elements in your browser.
+let colorArr = ["Red","Yellow","Green"];
+// a. Ask the user what color he/she wants to add to the beginning & add that color to the beginning of the array. Display the updated array in your browser.
+// let one = prompt("what color he/she wants to add to the beginning");
+// colorArr.unshift(one);
+// console.log(colorArr);
+// // b. Ask the user what color he/she wants to add to the end & add that color to the end of the array. Display the updated array in your browser.
+// let two = prompt("what color he/she wants to add to the end");
+// colorArr.push(two);
+// console.log(colorArr);
+// // c. Add two more color to the beginning of the array. Display the updated array in your browser.
+// let pehlaHe = prompt("Add");
+// let DoosraHe = prompt("Add");
+// colorArr.unshift(pehlaHe);
+// console.log(colorArr);
+
+// colorArr.unshift(DoosraHe);
+// console.log(colorArr);
+
+// // d. Delete the first color in the array. Display the updated array in your browser.
+// colorArr.shift();
+// console.log(colorArr);
+// // e. Delete the last color in the array. Display the updated array in your browser.
+// colorArr.pop();
+// console.log(colorArr);
+
+// f. Ask the user at which index he/she wants to add a color & color name. Then add the color to desired position/index. . Display the updated array in your browser.
+
+// let a = prompt("Enter")
+// let b = prompt("en")
+
+// colorArr.splice(a,0,b)
+// console.log(colorArr);
+
+// g. Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete. Then remove the same number of color(s) from user-defined position/index. . Display the updated array in your browser.
+
+
+// let a = prompt("Enter")
+// let b = prompt("en")
+
+// colorArr.splice(a,b)
+// console.log(colorArr);
