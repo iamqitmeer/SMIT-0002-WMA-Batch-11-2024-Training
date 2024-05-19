@@ -854,7 +854,7 @@
 // `);
 
 // Initialize an array with color names. Display the array elements in your browser.
-let colorArr = ["Red","Yellow","Green"];
+let colorArr = ["Red", "Yellow", "Green"];
 // a. Ask the user what color he/she wants to add to the beginning & add that color to the beginning of the array. Display the updated array in your browser.
 // let one = prompt("what color he/she wants to add to the beginning");
 // colorArr.unshift(one);
@@ -889,7 +889,6 @@ let colorArr = ["Red","Yellow","Green"];
 
 // g. Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete. Then remove the same number of color(s) from user-defined position/index. . Display the updated array in your browser.
 
-
 // let a = prompt("Enter")
 // let b = prompt("en")
 
@@ -898,3 +897,4 @@ let colorArr = ["Red","Yellow","Green"];
 
 // Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method.
 
+// let studentsMarks = [341, 234, 232, 322, 212, 333, 321, 213];
