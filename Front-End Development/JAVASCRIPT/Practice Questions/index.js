@@ -895,3 +895,4 @@ let colorArr = ["Red","Yellow","Green"];
 
 // colorArr.splice(a,b)
 // console.log(colorArr);
+
