@@ -896,3 +896,5 @@ let colorArr = ["Red","Yellow","Green"];
 // colorArr.splice(a,b)
 // console.log(colorArr);
 
+// Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method.
+
