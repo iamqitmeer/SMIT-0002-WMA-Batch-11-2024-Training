@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <header class="px-8 lg:px-6 h-14 flex items-center">
+      <a href="#" class="flex items-center justify-center">
+        <svg
+          class="h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+        </svg>
+        <span class="sr-only">Tailwind CSS Clone</span>
+      </a>
+      <nav class="ml-auto flex gap-4 sm:gap-6">
+        <a
+          href="#"
+          class="text-sm font-medium hover:underline underline-offset-4"
+          >Features</a
+        >
+        <a
+          href="#"
+          class="text-sm font-medium hover:underline underline-offset-4"
+          >Pricing</a
+        >
+        <a
+          href="#"
+          class="text-sm font-medium hover:underline underline-offset-4"
+          >About</a
+        >
+        <a
+          href="#"
+          class="text-sm font-medium hover:underline underline-offset-4"
+          >Contact</a
+        >
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <section class="w-full pt-12 md:pt-24 lg:pt-32 border-y">
+        <div class="px-4 md:px-6 space-y-10 xl:space-y-16">
+          <div
+            class="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16"
+          >
+            <div>
+              <h1
+                class="lg:leading-tighter text-9xl font-black tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]"
+              >
+                Rapidly build modern websites without ever leaving your HTML.
+              </h1>
+              <p
+                class="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400"
+              >
+                A utility-first CSS framework packed with classes like
+                <span>flex, pt-4, text-center</span> and
+                <span>rotate-90</span> that can be composed to build any design,
+                directly in your markup.
+              </p>
+              <div class="space-x-4 mt-6">
+                <a
+                  href="#"
+                  class="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="#"
+                  class="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full py-12 md:py-24 lg:py-32">
+        <div class="container space-y-12 px-4 md:px-6">
+          <div
+            class="flex flex-col items-center justify-center space-y-4 text-center"
+          >
+            <div class="space-y-2">
+              <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Discover the Benefits of Tailwind CSS
+              </h2>
+              <p
+                class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
+              >
+                Tailwind CSS is a highly customizable, low-level CSS framework
+                that gives you all of the building blocks you need to build
+                bespoke designs without any annoying opinionated styles.
+              </p>
+            </div>
+          </div>
+          <div
+            class="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3"
+          >
+            <div class="grid gap-1">
+              <div class="flex items-center gap-4">
+                <div class="rounded-full bg-gray-100 p-3 dark:bg-gray-800">
+                  <svg
+                    class="h-6 w-6 text-gray-900 dark:text-gray-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                    />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold">Highly Customizable</h3>
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Tailor Tailwind CSS to your specific design needs with ease,
+                without the need for complex CSS.
+              </p>
+            </div>
+            <div class="grid gap-1">
+              <div class="flex items-center gap-4">
+                <div class="rounded-full bg-gray-100 p-3 dark:bg-gray-800">
+                  <svg
+                    class="h-6 w-6 text-gray-900 dark:text-gray-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"
+                    />
+                    <path d="m13 12-3 5h4l-3 5" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold">Rapid Development</h3>
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Boost your productivity with Tailwind's utility-first approach,
+                allowing you to build complex interfaces quickly.
+              </p>
+            </div>
+            <div class="grid gap-1">
+              <div class="flex items-center gap-4">
+                <div class="rounded-full bg-gray-100 p-3 dark:bg-gray-800">
+                  <svg
+                    class="h-6 w-6 text-gray-900 dark:text-gray-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold">Modular Design</h3>
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Tailwind's modular approach makes it easy to build complex,
+                responsive designs without sacrificing maintainability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    
+
+    <div>
+      <h1
+        class="text-3xl font-bold text-center mb-2 tracking-tighter sm:text-5xl"
+      >
+        Pricing
+      </h1>
+      <p
+        class="max-w-[400px] text-gray-500 text-center  mb-12 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
+      >
+        Simple and transparent pricing. No surprises, just the tools you need to
+        build amazing things.
+      </p>
+    </div>
+
+    <div
+      class="container mx-auto grid gap-8 px-4 mb-12 md:px-6 lg:grid-cols-3 lg:gap-12"
+    >
+      <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-gray-950">
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold">Starter</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Perfect for individuals and small teams.
+          </p>
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-bold">$9</span>
+            <span class="text-gray-500 dark:text-gray-400">/month</span>
+          </div>
+          <ul class="grid gap-2 text-gray-500 dark:text-gray-400">
+            <li class="flex items-center gap-2">
+              <svg
+                class="h-5 w-5 fill-primary"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>1 user</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg
+                class="h-5 w-5 fill-primary"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>5 GB storage</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg
+                class="h-5 w-5 fill-primary"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>Basic features</span>
+            </li>
+          </ul>
+          <button
+            class="w-full px-4 py-2 text-lg font-semibold text-white bg-gray-800 rounded-lg"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+      <div
+        class="rounded-lg bg-white p-6 shadow-lg dark:bg-gray-950 dark:ring-2 dark:ring-primary"
+      >
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold">Pro</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Ideal for growing teams and businesses.
+          </p>
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-bold">$29</span>
+            <span class="text-gray-500 dark:text-gray-400">/month</span>
+          </div>
+          <ul class="grid gap-2 text-gray-500 dark:text-gray-400">
+            <li class="flex items-center gap-2">
+              <svg
+                class="h-5 w-5 fill-primary"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>5 users</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg
+                class="h-5 w-5 fill-primary"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>50 GB storage</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg
+                class="h-5 w-5 fill-primary"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>Advanced features</span>
+            </li>
+          </ul>
+          <button
+            class="w-full px-4 py-2 text-lg font-semibold text-white bg-gray-800 rounded-lg"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+      <div
+        class="grid gap-4 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-950 dark:ring-2 dark:ring-primary"
+      >
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold">Enterprise</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Tailored for large teams and organizations.
+          </p>
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-bold">$99</span>
+            <span class="text-gray-500 dark:text-gray-400">/month</span>
+          </div>
+          <ul class="grid gap-2 text-gray-500 dark:text-gray-400">
+            <li class="flex items-center gap-2">
+              <svg
+                class="h-5 w-5 fill-primary"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>Unlimited users</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg
+                class="h-5 w-5 fill-primary"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>Unlimited storage</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg
+                class="h-5 w-5 fill-primary"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>Enterprise features</span>
+            </li>
+          </ul>
+          <button
+            class="w-full px-4 py-2 text-lg font-semibold text-white bg-gray-800 rounded-lg"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="w-full py-12 md:py-24 lg:py-32 border-t">
+      <div class="container px-4 md:px-6">
+        <div class="grid gap-10 px-10 md:gap-16 lg:grid-cols-2">
+          <div class="space-y-4">
+            <div
+              class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800"
+            >
+              Community
+            </div>
+            <h2
+              class="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]"
+            >
+              Join the Tailwind CSS community
+            </h2>
+            <a
+              href="#"
+              class="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+            >
+              Join Discord
+            </a>
+          </div>
+          <div class="flex flex-col items-start space-y-4">
+            <div
+              class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800"
+            >
+              Resources
+            </div>
+            <p
+              class="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed dark:text-gray-400"
+            >
+              Explore our extensive documentation, guides, and community
+              resources to get the most out of Tailwind CSS.
+            </p>
+            <a
+              href="#"
+              class="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+            >
+              Explore Resources
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full max-w-3xl mx-auto py-12 md:py-16 lg:py-20">
+        <div class="space-y-4 text-center">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Your Feedback</h2>
+          <p class="text-gray-500 md:text-xl lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            We'd love to hear your thoughts on our Tailwind CSS clone website. Please take a moment to share your
+            feedback.
+          </p>
+        </div>
+        <form class="mt-8 space-y-6">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="space-y-2">
+              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+              <input id="name" type="text" placeholder="Enter your name" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:focus:ring-gray-500"/>
+            </div>
+            <div class="space-y-2">
+              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+              <input id="email" type="email" placeholder="Enter your email" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:focus:ring-gray-500"/>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label for="feedback" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Feedback</label>
+            <textarea id="feedback" placeholder="Share your thoughts" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:focus:ring-gray-500"></textarea>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="w-5 h-5 fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="w-5 h-5 fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="w-5 h-5 fill-muted stroke-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="w-5 h-5 fill-muted stroke-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <button type="submit" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded-md shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300">
+              Submit Feedback
+            </button>
+          </div>
+        </form>
+      </section>
+
+    <footer
+      class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t"
+    >
+      <p class="text-xs text-gray-500 dark:text-gray-400">
+        &copy; 2024 Tailwind CSS Clone. All rights reserved.
+      </p>
+      <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+        <a href="#" class="text-xs hover:underline underline-offset-4"
+          >Documentation</a
+        >
+        <a href="#" class="text-xs hover:underline underline-offset-4"
+          >Twitter</a
+        >
+        <a href="#" class="text-xs hover:underline underline-offset-4"
+          >GitHub</a
+        >
+      </nav>
+    </footer>
+  </body>
+</html>
