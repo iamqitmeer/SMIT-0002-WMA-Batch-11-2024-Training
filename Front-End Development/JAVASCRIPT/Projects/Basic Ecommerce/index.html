@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+
+<header class="flex h-16 w-full items-center justify-between bg-background px-4 sm:px-6">
+    <a class="flex items-center gap-2 font-semibold" href="#" rel="ugc">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-6 w-6"
+      >
+        <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+      </svg>
+      <span class="sr-only">Acme Inc</span>
+    </a>
+    <div class="flex items-center gap-2">
+      <button class="text-white bg-blue-500 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+        Add Product
+      </button>
+      <button class=" inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+        Login
+      </button>
+      <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+        Sign Up
+      </button>
+    </div>
+  </header>
+
+<!-- Product Cards -->
+
+    <!-- <section
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 md:p-6"
+    >
+      <div
+        class="bg-background rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-lg"
+      >
+        <img
+          src="/placeholder.svg"
+          alt="Product 1"
+          width="400"
+          height="300"
+          class="w-full h-60 object-cover"
+          style="aspect-ratio: 400 / 300; object-fit: cover"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-primary-foreground">
+            Cozy Knit Sweater
+          </h3>
+          <p class="text-sm text-muted-foreground">
+            Stay warm and stylish in this soft, comfortable sweater.
+          </p>
+          <div class="flex items-center justify-between mt-4">
+            <span class="text-base font-semibold text-primary-foreground"
+              >$49.99</span
+            >
+            <button
+              class="bg-blue-500 text-white inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-background rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-lg"
+      >
+        <img
+          src="/placeholder.svg"
+          alt="Product 2"
+          width="400"
+          height="300"
+          class="w-full h-60 object-cover"
+          style="aspect-ratio: 400 / 300; object-fit: cover"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-primary-foreground">
+            Sleek Leather Backpack
+          </h3>
+          <p class="text-sm text-muted-foreground">
+            Carry your essentials in style with this durable backpack.
+          </p>
+          <div class="flex items-center justify-between mt-4">
+            <span class="text-base font-semibold text-primary-foreground"
+              >$79.99</span
+            >
+            <button
+              class="bg-blue-500 text-white inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-background rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-lg"
+      >
+        <img
+          src="/placeholder.svg"
+          alt="Product 3"
+          width="400"
+          height="300"
+          class="w-full h-60 object-cover"
+          style="aspect-ratio: 400 / 300; object-fit: cover"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-primary-foreground">
+            Wireless Noise-Cancelling Headphones
+          </h3>
+          <p class="text-sm text-muted-foreground">
+            Enjoy your music in peace with these high-quality headphones.
+          </p>
+          <div class="flex items-center justify-between mt-4">
+            <span class="text-base font-semibold text-primary-foreground"
+              >$99.99</span
+            >
+            <button
+              class="bg-blue-500 text-white inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-background rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-lg"
+      >
+        <img
+          src="/placeholder.svg"
+          alt="Product 4"
+          width="400"
+          height="300"
+          class="w-full h-60 object-cover"
+          style="aspect-ratio: 400 / 300; object-fit: cover"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-primary-foreground">
+            Minimalist Desk Lamp
+          </h3>
+          <p class="text-sm text-muted-foreground">
+            Illuminate your workspace with this sleek and modern lamp.
+          </p>
+          <div class="flex items-center justify-between mt-4">
+            <span class="text-base font-semibold text-primary-foreground"
+              >$39.99</span
+            >
+            <button
+              class="bg-blue-500 text-white inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Add Product -->
+
+<!-- <div class="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-4xl" data-v0-t="card">
+    <div class="flex flex-col space-y-1.5 p-6">
+      <h3 class="whitespace-nowrap tracking-tight text-4xl font-bold">Add New Product</h3>
+      <p class="text-sm text-muted-foreground">Fill out the form to add a new product.</p>
+    </div>
+    <div class="p-6">
+      <form class="grid gap-6">
+        <div class="grid gap-3">
+          <label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            for="title"
+          >
+            Product Title
+          </label>
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            id="title"
+            placeholder="Enter product title"
+            type="text"
+          />
+        </div>
+        <div class="grid gap-3">
+          <label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            for="description"
+          >
+            Product Description
+          </label>
+          <textarea
+            class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[120px]"
+            id="description"
+            placeholder="Enter product description"
+          ></textarea>
+        </div>
+        <div class="grid gap-3">
+          <label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            for="image"
+          >
+            Product Image
+          </label>
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            id="image"
+            type="file"
+          />
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="grid gap-3">
+            <label
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              for="price"
+            >
+              Product Price
+            </label>
+            <input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              id="price"
+              placeholder="Enter product price"
+              type="number"
+            />
+          </div>
+          <div class="grid gap-3">
+            <label
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              for="category"
+            >
+              Product Category
+            </label>
+            <button
+              type="button"
+              role="combobox"
+              aria-controls="radix-:rl:"
+              aria-expanded="false"
+              aria-autocomplete="none"
+              dir="ltr"
+              data-state="closed"
+              data-placeholder=""
+              class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              <span style="pointer-events: none;">Select category</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            <select
+              aria-hidden="true"
+              tabindex="-1"
+              style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;"
+            >
+              <option value=""></option>
+              <option value="electronics">Electronics</option>
+              <option value="clothing">Clothing</option>
+              <option value="home">Home &amp; Garden</option>
+              <option value="toys">Toys &amp; Games</option>
+              <option value="books">Books</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="grid gap-3">
+            <label
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              for="sku"
+            >
+              Product SKU
+            </label>
+            <input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              id="sku"
+              placeholder="Enter product SKU"
+              type="text"
+            />
+          </div>
+          <div class="grid gap-3">
+            <label
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              for="inventory"
+            >
+              Product Inventory
+            </label>
+            <input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              id="inventory"
+              placeholder="Enter product inventory"
+              type="number"
+            />
+          </div>
+        </div>
+        <div class="grid gap-3">
+          <label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            for="tags"
+          >
+            Product Tags
+          </label>
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            id="tags"
+            placeholder="Enter product tags (comma-separated)"
+            type="text"
+          />
+        </div>
+        <div class="grid gap-3">
+          <label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            for="weight"
+          >
+            Product Shipping Weight
+          </label>
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            id="weight"
+            placeholder="Enter product shipping weight"
+            type="number"
+          />
+        </div>
+      </form>
+    </div>
+  </div> -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
