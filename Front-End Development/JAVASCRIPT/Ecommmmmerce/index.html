@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+   
+<!-- <form id="product_form">
+<input type="text" placrholder="Name" id="Name"/>
+<input type="text" placrholder="Price" id="Price"/>
+<input type="text" placrholder="Category" id="Category"/>
+
+<input  value="" type="text" placrholder="Image url" id="Url"/>
+<input type="submit" value="submit"/>
+</form>
+
+<div>
+<select name="Category" id="Category">
+<option value="men's clothing">men's clothing</option>
+<option value="electronics">electronics</option>
+<option value="women's clothing">women's clothing</option>
+<option value="jewelery">jewelery</option>
+</select>
+
+<div  id="container">
+</div>
+
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+<div id="auth_container">
+    
+     
+    
+          <div class="p-56">
+  
+        <div class="flex w-96 flex-col space-y-5 rounded-lg border py-10 px-5 shadow-xl mx-auto">
+          <div class="mx-auto mb-2 space-y-3">
+            <h1 class=" text-3xl font-bold text-gray-700">Create Account</h1>
+            
+          </div>
+        
+          <div>
+            <div class="relative mt-2 w-full">
+              <input type="text" id="signup_email" class="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
+              <label for="email" class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600"> Enter Your Email </label>
+            </div>
+          </div>
+        
+          <div>
+            <div class="relative mt-2 w-full">
+              <input type="text" id="password" id="signup_password" class="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
+              <label for="password" class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600"> Enter Your Password</label>
+            </div>
+          </div>
+        
+          <button id="signup_btn" class="rounded-lg bg-blue-600 py-3 font-bold text-white">Create Account</button>
+        </div>
+        </div>
+     
+      
+      
+
+
+
+
+
+        <div class="p-56">
+  
+          <div class="flex w-96 flex-col space-y-5 rounded-lg border py-10 px-5 shadow-xl mx-auto">
+            <div class="mx-auto mb-2 space-y-3">
+              <h1 class=" text-3xl font-bold text-gray-700">Log in</h1>
+              <p class="text-gray-500">Login to access your account</p>
+            </div>
+          
+            <div>
+              <div class="relative mt-2 w-full">
+                <input type="text" id="signin_email"  class="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
+                <label for="email" class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600"> Enter Your Email </label>
+              </div>
+            </div>
+          
+            <div>
+              <div class="relative mt-2 w-full">
+                <input type="text" id="signin_password" class="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder="password " />
+                <label for="password" class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600"> Enter Your Password</label>
+              </div>
+            </div>
+          
+            <button  id="signin_btn" class="rounded-lg bg-blue-600 py-3 font-bold text-white">Login</button>
+          </div>
+          </div>
+      </div>
+  
+    
+     <div id="user_container">
+      <h1>products</h1>
+      <div class="mx-auto mt-5 w-screen max-w-screen-md py-20 leading-6">
+        <form class="relative mx-auto flex w-full max-w-2xl items-center justify-between rounded-md border shadow-lg">
+          <svg class="absolute left-2 block h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" class=""></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65" class=""></line>
+          </svg>
+          <input type="name" name="search" class="h-14 w-full rounded-md py-4 pr-40 pl-12 outline-none focus:ring-2"
+            placeholder="City, Address, Zip :" />
+          <button type="submit"
+            class="absolute right-0 mr-1 inline-flex h-12 items-center justify-center rounded-lg bg-gray-900 px-10 font-medium text-white focus:ring-4 hover:bg-gray-700">Search</button>
+        </form>
+
+
+        <details open
+          class="m-10 max-w-md w-screen overflow-hidden rounded-lg border border-gray-200 open:shadow-lg text-gray-700">
+          <summary class="flex cursor-pointer select-none items-center justify-between bg-gray-100 px-5 py-3 lg:hidden">
+            <span class="text-sm font-medium"> Toggle Filters </span>
+
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </summary>
+
+          <form action="" class="flex border-t border-gray-200 lg:border-t-0">
+            <fieldset class="w-full">
+              <legend class="block w-full bg-gray-50 px-5 py-3 text-xs font-medium">Type</legend>
+
+              <div class="space-y-2 px-5 py-6">
+                <div class="flex items-center">
+                  <input id="New" type="checkbox" name="type[New]" class="h-5 w-5 rounded border-gray-300" checked />
+
+                  <label for="New" class="ml-3 text-sm font-medium"> New </label>
+                </div>
+
+                <div class="flex items-center">
+                  <input id="Used" type="checkbox" name="type[Used]" class="h-5 w-5 rounded border-gray-300" />
+
+                  <label for="Used" class="ml-3 text-sm font-medium"> Used </label>
+                </div>
+
+                <div class="flex items-center">
+                  <input id="Branded" type="checkbox" name="type[Branded]" class="h-5 w-5 rounded border-gray-300" />
+
+                  <label for="Branded" class="ml-3 text-sm font-medium"> Branded </label>
+                </div>
+
+                <div class="pt-2">
+                  <button type="button" class="text-xs text-gray-500 underline">Reset Type</button>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="w-full">
+              <legend class="block w-full bg-gray-50 px-5 py-3 text-xs font-medium">Price</legend>
+
+              <div class="space-y-2 px-5 py-6">
+                <div class="flex items-center">
+                  <input id="300+" type="radio" name="Price" value="300+" class="h-5 w-5 rounded border-gray-300" />
+
+                  <label for="300+" class="ml-3 text-sm font-medium"> 300+ </label>
+                </div>
+
+                <div class="flex items-center">
+                  <input id="600+" type="radio" name="Price" value="600+" class="h-5 w-5 rounded border-gray-300" />
+
+                  <label for="600+" class="ml-3 text-sm font-medium"> 600+ </label>
+                </div>
+
+                <div class="flex items-center">
+                  <input id="1500+" type="radio" name="Price" value="1500+" class="h-5 w-5 rounded border-gray-300"
+                    checked />
+
+                  <label for="1500+" class="ml-3 text-sm font-medium"> 1500+ </label>
+                </div>
+
+                <div class="pt-2">
+                  <button type="button" class="text-xs text-gray-500 underline">Reset Price</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <div class="">
+            <div class="flex justify-between border-t border-gray-200 px-5 py-3">
+              <button name="reset" type="button" class="rounded text-xs font-medium text-gray-600 underline">Reset
+                All</button>
+
+              <button name="commit" type="button"
+                class="rounded bg-blue-600 px-5 py-3 text-xs font-medium text-white active:scale-95">Apply
+                Filters</button>
+            </div>
+          </div>
+        </details>
+
+
+        <div id="cards" class="flex flex-wrap"></div>
+
+
+        <div id="searchedproducts"> </div>
+
+        
+        <h1 id="user_email"></h1>
+        <button
+          class="absolute right-0 mr-1 inline-flex h-12 items-center justify-center rounded-lg bg-gray-900 px-10 font-medium text-white focus:ring-4 hover:bg-gray-700"
+          id="logout_btn">Logout</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+    
+
+  
+    <script src="app.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
