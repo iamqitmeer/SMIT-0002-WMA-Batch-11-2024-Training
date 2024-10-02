@@ -13,12 +13,24 @@ import {
   Avatar,
 } from "@nextui-org/react";
 import { NavLink } from "react-router-dom";
+import { auth } from "../utils/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { useState } from "react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  let [isUserSignIn, setIsUserSignIn] = useState(false);
 
   const menuItems = ["Home", "Products", "About", "Contact"];
 
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid;
+      setIsUserSignIn(user);
+    } else {
+      setIsUserSignIn(false);
+    }
+  });
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
