@@ -1,21 +1,31 @@
 import { Button, Image } from "@nextui-org/react";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 function ProductCard({ singleProduct }) {
+  let { cart, setCart } = useContext(CartContext);
+
+  let addToCart = (singleProduct) => {
+    let cloneArr = [...cart];
+    cloneArr.push(singleProduct);
+    setCart(cloneArr);
+  };
+
+
   return (
     <div className=" p-4 w-[400px] rounded-xl flex items-center justify-center flex-col">
       <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-       <Link to={`/product/${singleProduct.id}`}>
-        <div className="h-56 w-full">
-          <Image
-            width={300}
-            height={220}
-            alt="NextUI hero Image with delay"
-            src={singleProduct.thumbnail}
+        <Link to={`/product/${singleProduct.id}`}>
+          <div className="h-56 w-full">
+            <Image
+              width={300}
+              height={220}
+              alt="NextUI hero Image with delay"
+              src={singleProduct.thumbnail}
             />
-        </div>
-            </Link>
+          </div>
+        </Link>
         <div>
           <div className="mb-4 flex items-center justify-between gap-4">
             <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
@@ -149,6 +159,7 @@ function ProductCard({ singleProduct }) {
               ${singleProduct.price}
             </p>
             <Button
+              onClick={() => addToCart(singleProduct)}
               className="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800"
               color="primary"
               variant="shadow"

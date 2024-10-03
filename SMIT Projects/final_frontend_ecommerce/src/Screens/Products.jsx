@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { Card, Button, Image} from "@nextui-org/react";
+import { useContext, useEffect, useState } from "react";
+import { Card, Button, Image } from "@nextui-org/react";
 import Header from "../Components/Navbar";
-import ProductCard from "../Components/ProductCard"; 
+import ProductCard from "../Components/ProductCard";
+import { CartContext } from "../context/CartContext";
 
 function Products() {
-
   let [products, setProducts] = useState(null);
 
   useEffect(() => {
@@ -16,15 +16,16 @@ function Products() {
       console.log(error);
     }
   }, []);
-  
 
   return (
     <div className="w-full h-screen">
       <div className="p-6">
         <div className="flex items-center justify-center flex-wrap">
-          {products ? products.map((singleProduct) => {
-            return <ProductCard singleProduct={singleProduct} />
-          }) : (
+          {products ? (
+            products.map((singleProduct) => {
+              return <ProductCard singleProduct={singleProduct} />;
+            })
+          ) : (
             <div className="w-full h-screen flex items-center justify-center">
               <div role="status">
                 <svg

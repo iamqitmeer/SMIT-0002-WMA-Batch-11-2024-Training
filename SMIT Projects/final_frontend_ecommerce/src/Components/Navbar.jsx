@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -11,26 +11,38 @@ import {
   Button,
   Badge,
   Avatar,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  User,
 } from "@nextui-org/react";
 import { NavLink } from "react-router-dom";
 import { auth } from "../utils/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useState } from "react";
+import { CartContext } from "../context/CartContext";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  let [isUserSignIn, setIsUserSignIn] = useState(false);
+  const [isUserSignIn, setIsUserSignIn] = useState(false);
 
   const menuItems = ["Home", "Products", "About", "Contact"];
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      const uid = user.uid;
-      setIsUserSignIn(user);
-    } else {
-      setIsUserSignIn(false);
-    }
-  });
+  let { cart, setCart } = useContext(CartContext);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        setIsUserSignIn(user);
+        console.log("He");
+      } else {
+        setIsUserSignIn(false);
+      }
+    });
+  }, []);
+
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
@@ -72,9 +84,10 @@ export default function Header() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem className="hidden lg:flex">
-          <NavbarItem className="hidden lg:flex">
+        <NavLink to="/cart">
+        <NavbarItem className="hidden lg:flex">
             <Badge
-              content="5"
+              content={cart.length ? cart.length : 0}
               className="text-sm"
               classNames="bg-blue-200"
               variant="solid"
@@ -89,13 +102,53 @@ export default function Header() {
               </Button>
             </Badge>
           </NavbarItem>
+          </NavLink>
         </NavbarItem>
         <NavbarItem>
-          <NavLink to="/register">
-            <Button color="primary" variant="shadow">
-              Sign Up
-            </Button>
-          </NavLink>
+          {isUserSignIn ? (
+            <div>
+              {" "}
+              <Dropdown placement="bottom-start">
+                <DropdownTrigger>
+                  <User
+                    as="button"
+                    avatarProps={{
+                      isBordered: true,
+                      src: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+                    }}
+                    className="transition-transform"
+                    // description="@tonyreichert"
+                    // name="Tony Reichert"
+                  />
+                </DropdownTrigger>
+                <DropdownMenu aria-label="User Actions" variant="flat">
+                  <DropdownItem key="profile" className="h-14 gap-2">
+                    <p className="font-bold">Signed in as</p>
+                    <p className="font-bold">@tonyreichert</p>
+                  </DropdownItem>
+                  <DropdownItem key="settings">My Settings</DropdownItem>
+                  <DropdownItem key="team_settings">Team Settings</DropdownItem>
+                  <DropdownItem key="analytics">Analytics</DropdownItem>
+                  <DropdownItem key="system">System</DropdownItem>
+                  <DropdownItem key="configurations">
+                    Configurations
+                  </DropdownItem>
+                  <DropdownItem key="help_and_feedback">
+                    Help & Feedback
+                  </DropdownItem>
+                  <DropdownItem key="logout" color="danger">
+                    Log Out
+                  </DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+            </div>
+          ) : (
+            <NavLink to="/register">
+              <Button className="w-full" color="primary" variant="shadow">
+                Sign Up
+              </Button>
+            </NavLink>
+          )}
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
@@ -107,8 +160,9 @@ export default function Header() {
           </NavbarMenuItem>
         ))}
         <NavbarMenuItem className="flex gap-4">
+          <NavLink to="/cart">
           <Badge
-            content="5"
+            content={cart.length ? cart.length : 0}
             className="text-sm"
             classNames="bg-blue-200"
             variant="solid"
@@ -117,11 +171,44 @@ export default function Header() {
               <i class="ri-shopping-cart-fill text-lg"></i>
             </Button>
           </Badge>
-          <NavLink to="/register">
-            <Button className="w-full" color="primary" variant="shadow">
-              Sign Up
-            </Button>
           </NavLink>
+          {isUserSignIn ? (
+            <Dropdown placement="bottom-start">
+              <DropdownTrigger>
+                <User
+                  as="button"
+                  avatarProps={{
+                    isBordered: true,
+                    src: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+                  }}
+                  className="transition-transform"
+                />
+              </DropdownTrigger>
+              <DropdownMenu aria-label="User Actions" variant="flat">
+                <DropdownItem key="profile" className="h-14 gap-2">
+                  <p className="font-bold">Signed in as</p>
+                  <p className="font-bold">@tonyreichert</p>
+                </DropdownItem>
+                <DropdownItem key="settings">My Settings</DropdownItem>
+                <DropdownItem key="team_settings">Team Settings</DropdownItem>
+                <DropdownItem key="analytics">Analytics</DropdownItem>
+                <DropdownItem key="system">System</DropdownItem>
+                <DropdownItem key="configurations">Configurations</DropdownItem>
+                <DropdownItem key="help_and_feedback">
+                  Help & Feedback
+                </DropdownItem>
+                <DropdownItem key="logout" color="danger">
+                  Log Out
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          ) : (
+            <NavLink to="/register">
+              <Button className="w-full" color="primary" variant="shadow">
+                Sign Up
+              </Button>
+            </NavLink>
+          )}
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
