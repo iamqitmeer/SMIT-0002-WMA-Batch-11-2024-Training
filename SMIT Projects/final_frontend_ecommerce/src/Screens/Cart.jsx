@@ -1,13 +1,26 @@
 import { Button } from "@nextui-org/react";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 
 function Cart() {
-
-// let [productsQuantitu]
+  let [totalPrice, setTotalPrice] = useState(0);
 
   let { cart, setCart } = useContext(CartContext);
   console.log(cart);
+
+  useEffect(() => {
+    setTotalPrice(cart.reduce((total, products) => total + products.price, 0));
+  }, [cart]);
+
+  let deleteCartItem = (index) => {
+    let newArray = [...cart];
+    newArray.splice(index, 1);
+    setCart(newArray);
+  };
+
+  let storePickup = 12;
+  let tax = 6 * cart.length;
+  console.log(tax);
 
   return (
     <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
@@ -15,7 +28,7 @@ function Cart() {
         <div className=" md:gap-6 lg:flex lg:items-start xl:gap-8">
           <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
             <div className="space-y-6">
-              {cart.map((product) => {
+              {cart.map((product, index) => {
                 return (
                   <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
                     <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
@@ -78,6 +91,7 @@ function Cart() {
                           </button>
 
                           <button
+                            onClick={() => deleteCartItem(index)}
                             type="button"
                             className="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500"
                           >
@@ -122,16 +136,7 @@ function Cart() {
                       Original price
                     </dt>
                     <dd className="text-base font-medium text-gray-900 dark:text-white">
-                      $7,592.00
-                    </dd>
-                  </dl>
-
-                  <dl className="flex items-center justify-between gap-4">
-                    <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                      Savings
-                    </dt>
-                    <dd className="text-base font-medium text-green-600">
-                      -$299.00
+                      ${Math.floor(totalPrice)}
                     </dd>
                   </dl>
 
@@ -140,7 +145,7 @@ function Cart() {
                       Store Pickup
                     </dt>
                     <dd className="text-base font-medium text-gray-900 dark:text-white">
-                      $99
+                      ${storePickup}
                     </dd>
                   </dl>
 
@@ -149,7 +154,7 @@ function Cart() {
                       Tax
                     </dt>
                     <dd className="text-base font-medium text-gray-900 dark:text-white">
-                      $799
+                      ${tax}
                     </dd>
                   </dl>
                 </div>
@@ -159,7 +164,7 @@ function Cart() {
                     Total
                   </dt>
                   <dd className="text-base font-bold text-gray-900 dark:text-white">
-                    $8,191.00
+                    ${Math.floor(totalPrice) + tax + storePickup}
                   </dd>
                 </dl>
               </div>
