@@ -12,6 +12,7 @@ import Login from "./Screens/Login";
 import AddProduct from "./Screens/AddProduct";
 import ManageProduct from "./Screens/ManageProduct";
 import Cart from "./Screens/Cart";
+import Checkout from "./Screens/Checkout";
 
 function App() {
   const router = createBrowserRouter([
@@ -51,7 +52,7 @@ function App() {
           path: "/manage_product",
           element: <About />,
         },
-        { path: "/manage_products", element: <ManageProduct /> },
+        { path: "/checout_process", element: <Checkout /> },
       ],
     },
     {
@@ -65,9 +66,7 @@ function App() {
   ]);
 
   return (
-    <div>
       <RouterProvider router={router} />
-    </div>
   );
 }
 
