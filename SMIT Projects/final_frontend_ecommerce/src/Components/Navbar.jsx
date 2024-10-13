@@ -19,13 +19,13 @@ import {
 } from "@nextui-org/react";
 import { NavLink } from "react-router-dom";
 import { auth } from "../utils/firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useState } from "react";
 import { CartContext } from "../context/CartContext";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isUserSignIn, setIsUserSignIn] = useState(false);
+  const [isUserSignIn, setIsUserSignIn] = useState(null);
 
   const menuItems = ["Home", "Products", "About", "Contact"];
 
@@ -35,13 +35,18 @@ export default function Header() {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
+        console.log(user);
         setIsUserSignIn(user);
-        console.log("He");
       } else {
-        setIsUserSignIn(false);
+        console.log("Not Signed In");
+        setIsUserSignIn(null);
       }
     });
   }, []);
+
+  function handleSignOut() {
+    signOut(auth);
+  }
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -84,24 +89,24 @@ export default function Header() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem className="hidden lg:flex">
-        <NavLink to="/cart">
-        <NavbarItem className="hidden lg:flex">
-            <Badge
-              content={cart.length ? cart.length : 0}
-              className="text-sm"
-              classNames="bg-blue-200"
-              variant="solid"
-            >
-              <Button
-                isIconOnly
-                color="primary"
-                variant="flat"
-                aria-label="Like"
+          <NavLink to="/cart">
+            <NavbarItem className="hidden lg:flex">
+              <Badge
+                content={cart.length ? cart.length : 0}
+                className="text-sm"
+                classNames="bg-blue-200"
+                variant="solid"
               >
-                <i class="ri-shopping-cart-fill text-lg"></i>
-              </Button>
-            </Badge>
-          </NavbarItem>
+                <Button
+                  isIconOnly
+                  color="primary"
+                  variant="flat"
+                  aria-label="Like"
+                >
+                  <i class="ri-shopping-cart-fill text-lg"></i>
+                </Button>
+              </Badge>
+            </NavbarItem>
           </NavLink>
         </NavbarItem>
         <NavbarItem>
@@ -124,7 +129,7 @@ export default function Header() {
                 <DropdownMenu aria-label="User Actions" variant="flat">
                   <DropdownItem key="profile" className="h-14 gap-2">
                     <p className="font-bold">Signed in as</p>
-                    <p className="font-bold">@tonyreichert</p>
+                    <p className="font-bold">{isUserSignIn.email}</p>
                   </DropdownItem>
                   <DropdownItem key="settings">My Settings</DropdownItem>
                   <DropdownItem key="team_settings">Team Settings</DropdownItem>
@@ -136,7 +141,11 @@ export default function Header() {
                   <DropdownItem key="help_and_feedback">
                     Help & Feedback
                   </DropdownItem>
-                  <DropdownItem key="logout" color="danger">
+                  <DropdownItem
+                    onClick={handleSignOut}
+                    key="logout"
+                    color="danger"
+                  >
                     Log Out
                   </DropdownItem>
                 </DropdownMenu>
@@ -161,16 +170,21 @@ export default function Header() {
         ))}
         <NavbarMenuItem className="flex gap-4">
           <NavLink to="/cart">
-          <Badge
-            content={cart.length ? cart.length : 0}
-            className="text-sm"
-            classNames="bg-blue-200"
-            variant="solid"
-          >
-            <Button isIconOnly color="primary" variant="flat" aria-label="Like">
-              <i class="ri-shopping-cart-fill text-lg"></i>
-            </Button>
-          </Badge>
+            <Badge
+              content={cart.length ? cart.length : 0}
+              className="text-sm"
+              classNames="bg-blue-200"
+              variant="solid"
+            >
+              <Button
+                isIconOnly
+                color="primary"
+                variant="flat"
+                aria-label="Like"
+              >
+                <i class="ri-shopping-cart-fill text-lg"></i>
+              </Button>
+            </Badge>
           </NavLink>
           {isUserSignIn ? (
             <Dropdown placement="bottom-start">

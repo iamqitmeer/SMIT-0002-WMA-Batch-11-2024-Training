@@ -1,6 +1,7 @@
 import { Button } from "@nextui-org/react";
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 function Cart() {
   let [totalPrice, setTotalPrice] = useState(0);
@@ -169,12 +170,18 @@ function Cart() {
                 </dl>
               </div>
 
-              <Button
-                color="primary"
-                className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 "
-              >
-                Proceed to Checkout
-              </Button>
+              <Link to="/checout_process">
+                <Button
+                  disabled={Math.floor(totalPrice) == 0}
+                  className={`flex w-full items-center ${
+                    Math.floor(totalPrice) == 0
+                      ? "bg-gray-400 hover:bg-gray-500"
+                      : "bg-primary-700 hover:bg-primary-800"
+                  } justify-center rounded-lg px-5 py-2.5 text-sm font-medium text-white `}
+                >
+                  {Math.floor(totalPrice) == 0 && "Proceed to Checkout"}
+                </Button>
+              </Link>
 
               <div className="flex items-center justify-center gap-2">
                 <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
@@ -205,32 +212,6 @@ function Cart() {
               </div>
             </div>
 
-            <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
-              <form className="space-y-4">
-                <div>
-                  <label
-                    for="voucher"
-                    className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    {" "}
-                    Do you have a voucher or gift card?{" "}
-                  </label>
-                  <input
-                    type="text"
-                    id="voucher"
-                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                    placeholder=""
-                    required
-                  />
-                </div>
-                <Button
-                  color="primary"
-                  className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 "
-                >
-                  Apply Code
-                </Button>
-              </form>
-            </div>
           </div>
         </div>
       </div>
