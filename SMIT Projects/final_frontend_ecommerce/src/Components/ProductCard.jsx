@@ -1,17 +1,26 @@
 import { Button, Image } from "@nextui-org/react";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 
 function ProductCard({ singleProduct }) {
   let { cart, setCart } = useContext(CartContext);
+  // let [alreadyAdded, setAlreadyAdded] = useState(null);
 
   let addToCart = (singleProduct) => {
-    let cloneArr = [...cart];
-    cloneArr.push(singleProduct);
-    setCart(cloneArr);
-  };
+    // let cloneArr = [...cart];
+    // cloneArr.push(singleProduct);
+    // setCart(cloneArr);
+    const isProductInCart = cart.some((product) => product.id === singleProduct.id);
 
+    if (isProductInCart) {
+      alert("Already Added In Cart");
+    } else {
+      let cloneArr = [...cart];
+      cloneArr.push(singleProduct);
+      setCart(cloneArr);
+    }
+  };
 
   return (
     <div className=" p-4 w-[400px] rounded-xl flex items-center justify-center flex-col">

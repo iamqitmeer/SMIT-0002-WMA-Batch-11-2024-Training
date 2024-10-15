@@ -179,7 +179,7 @@ function Cart() {
                       : "bg-primary-700 hover:bg-primary-800"
                   } justify-center rounded-lg px-5 py-2.5 text-sm font-medium text-white `}
                 >
-                  {Math.floor(totalPrice) == 0 && "Proceed to Checkout"}
+                  Proceed to Checkout
                 </Button>
               </Link>
 
