@@ -3,19 +3,33 @@ import { Card, Button, Image } from "@nextui-org/react";
 import Header from "../Components/Navbar";
 import ProductCard from "../Components/ProductCard";
 import { CartContext } from "../context/CartContext";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../utils/firebase";
 
 function Products() {
   let [products, setProducts] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    try {
-      fetch("https://dummyjson.com/products")
-        .then((res) => res.json())
-        .then((data) => setProducts(data.products));
-    } catch (error) {
-      console.log(error);
-    }
+    const fetchProducts = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "products")); // Fetching products from 'products' collection
+        const productsArray = [];
+        querySnapshot.forEach((doc) => {
+          productsArray.push({ id: doc.id, ...doc.data() }); // Add document data with id
+        });
+        setProducts(productsArray);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching products from Firestore:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
   }, []);
+
+  console.log(products);
 
   return (
     <div className="w-full h-screen">

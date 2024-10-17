@@ -36,7 +36,7 @@ function Cart() {
                       <a className="w-20 shrink-0 md:order-1">
                         <img
                           className="h-20 w-20 dark:hidden"
-                          src={product.thumbnail}
+                          src={product.imageURL}
                           alt="imac image"
                         />
                       </a>

@@ -75,12 +75,12 @@ export default function Header() {
           </NavbarItem>
           <NavbarItem>
             <Link color="foreground">
-              <NavLink to="/about">Add Product</NavLink>
+              <NavLink to="/add_product">Add Product</NavLink>
             </Link>
           </NavbarItem>
           <NavbarItem>
             <Link color="foreground">
-              <NavLink to="/products">Manage Orders</NavLink>
+              <NavLink to="/manage_product">Manage Orders</NavLink>
             </Link>
           </NavbarItem>
 
@@ -91,27 +91,7 @@ export default function Header() {
           </NavbarItem>
         </NavbarContent>
         <NavbarContent className="hidden sm:flex gap-4" justify="end">
-          <NavbarItem className="hidden lg:flex">
-            <NavLink to="/cart">
-              <NavbarItem className="hidden lg:flex">
-                <Badge
-                  content={cart.length ? cart.length : 0}
-                  className="text-sm"
-                  classNames="bg-blue-200"
-                  variant="solid"
-                >
-                  <Button
-                    isIconOnly
-                    color="primary"
-                    variant="flat"
-                    aria-label="Like"
-                  >
-                    <i class="ri-shopping-cart-fill text-lg"></i>
-                  </Button>
-                </Badge>
-              </NavbarItem>
-            </NavLink>
-          </NavbarItem>
+        
           <NavbarItem>
             {isUserSignIn ? (
               <div>

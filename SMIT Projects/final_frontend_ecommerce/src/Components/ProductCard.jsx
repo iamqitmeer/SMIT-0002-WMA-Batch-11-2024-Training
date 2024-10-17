@@ -8,10 +8,10 @@ function ProductCard({ singleProduct }) {
   // let [alreadyAdded, setAlreadyAdded] = useState(null);
 
   let addToCart = (singleProduct) => {
-    // let cloneArr = [...cart];
-    // cloneArr.push(singleProduct);
-    // setCart(cloneArr);
-    const isProductInCart = cart.some((product) => product.id === singleProduct.id);
+
+    const isProductInCart = cart.some(
+      (product) => product.id === singleProduct.id
+    );
 
     if (isProductInCart) {
       alert("Already Added In Cart");
@@ -31,14 +31,14 @@ function ProductCard({ singleProduct }) {
               width={300}
               height={220}
               alt="NextUI hero Image with delay"
-              src={singleProduct.thumbnail}
+              src={singleProduct.imageURL}
             />
           </div>
         </Link>
         <div>
           <div className="mb-4 flex items-center justify-between gap-4">
             <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
-              {singleProduct.category}
+              {singleProduct.productCategory}
             </span>
 
             <div className="flex items-center justify-end gap-1">

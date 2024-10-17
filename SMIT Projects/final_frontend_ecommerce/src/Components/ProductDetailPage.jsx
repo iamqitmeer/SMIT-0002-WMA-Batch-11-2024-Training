@@ -1,21 +1,36 @@
 import { Button, Image } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../utils/firebase";
 function ProductDetailPage() {
-  let [product, setProduct] = useState();
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   let { id } = useParams();
   console.log(id);
 
   useEffect(() => {
-    try {
-      fetch(`https://dummyjson.com/products/${id}`)
-        .then((res) => res.json())
-        .then((data) => setProduct(data));
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
+    const fetchProduct = async () => {
+      setLoading(true);
+      try {
+        const productRef = doc(db, "products", id); // Use the productId prop to get the specific document
+        const productSnapshot = await getDoc(productRef);
+
+        if (productSnapshot.exists()) {
+          setProduct({ id: productSnapshot.id, ...productSnapshot.data() }); // Get product data
+        } else {
+          setError("No such product!");
+        }
+      } catch (err) {
+        setError("Error fetching product: " + err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [id]);
 
   return (
     <>
@@ -28,7 +43,7 @@ function ProductDetailPage() {
                   width={400}
                   height={300}
                   alt="NextUI hero Image with delay"
-                  src={product.thumbnail}
+                  src={product.imageURL}
                 />
               </div>
               <div className="mt-6 sm:mt-8 lg:mt-0">
@@ -110,7 +125,7 @@ function ProductDetailPage() {
                   </div>
                 </div>
                 <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
-                 <Button variant="bordered" color="primary">
+                  <Button variant="bordered" color="primary">
                     <svg
                       className="w-5 h-5 -ms-2 me-2"
                       aria-hidden="true"

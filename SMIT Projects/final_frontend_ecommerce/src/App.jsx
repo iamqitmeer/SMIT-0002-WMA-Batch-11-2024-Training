@@ -50,7 +50,7 @@ function App() {
         },
         {
           path: "/manage_product",
-          element: <About />,
+          element: <ManageProduct />,
         },
         { path: "/checout_process", element: <Checkout /> },
       ],
