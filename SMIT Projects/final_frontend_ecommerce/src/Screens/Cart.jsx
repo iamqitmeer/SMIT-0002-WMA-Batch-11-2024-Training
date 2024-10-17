@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function Cart() {
   let [totalPrice, setTotalPrice] = useState(0);
+let [quantity,setQuantity]=useState(1)
 
   let { cart, setCart } = useContext(CartContext);
   console.log(cart);
@@ -41,19 +42,9 @@ function Cart() {
                         />
                       </a>
 
-                      <label for="counter-input" className="sr-only">
-                        Choose quantity:
-                      </label>
+               
                       <div className="flex items-center justify-between md:order-3 md:justify-end">
-                        <div className="flex items-center gap-2">
-                          <button className="bg-gray-200 py-1 px-2 font-bold rounded-lg">
-                            +
-                          </button>
-                          <p className="font-semibold text-lg">0</p>
-                          <button className="bg-gray-200 py-1 px-2 font-bold rounded-lg">
-                            -
-                          </button>
-                        </div>
+                
                         <div className="text-end md:order-4 md:w-32">
                           <p className="text-base font-bold text-gray-900 dark:text-white">
                             ${product.price}
