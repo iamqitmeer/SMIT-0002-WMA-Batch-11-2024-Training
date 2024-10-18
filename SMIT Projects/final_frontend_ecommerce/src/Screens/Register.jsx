@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Input } from "@nextui-org/react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { auth } from "../utils/firebase";
@@ -15,6 +15,8 @@ function Register() {
   const toggleVisibility = () => setIsVisible(!isVisible);
 
   const navigate = useNavigate();
+
+  useEffect()
 
   const registerUser = () => {
     setLoader(true);

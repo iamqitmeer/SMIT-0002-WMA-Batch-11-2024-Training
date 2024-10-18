@@ -22,7 +22,29 @@ const ManageProducts = () => {
     description: "",
     imageURL: "",
   });
-  const navigate = useNavigate();
+
+  const [isUserSignIn, setIsUserSignIn] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        console.log(user);
+        setIsUserSignIn(user);
+      } else {
+        console.log("Not Signed In");
+        setIsUserSignIn(null);
+      }
+    });
+  }, []);
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (isUserSignIn && isUserSignIn.email === "admin@gmail.com") {
+    } else {
+      navigate("/");
+    }
+  }, []);
 
   // Fetch products from Firestore in real-time
   useEffect(() => {

@@ -1,8 +1,9 @@
 import { Button, Select, SelectItem } from "@nextui-org/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db, storage } from "../utils/firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   const [title, setTitle] = useState("");
@@ -12,6 +13,28 @@ const AddProduct = () => {
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [isUserSignIn, setIsUserSignIn] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        console.log(user);
+        setIsUserSignIn(user);
+      } else {
+        console.log("Not Signed In");
+        setIsUserSignIn(null);
+      }
+    });
+  }, []);
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (isUserSignIn && isUserSignIn.email === "admin@gmail.com") {
+    } else {
+      navigate("/");
+    }
+  }, []);
 
   const categories = [
     "Electronics",
