@@ -40,12 +40,6 @@ const ManageProducts = () => {
   }, []);
   let navigate = useNavigate();
 
-  useEffect(() => {
-    if (isUserSignIn && isUserSignIn.email === "admin@gmail.com") {
-    } else {
-      navigate("/");
-    }
-  }, []);
 
   // Fetch products from Firestore in real-time
   useEffect(() => {

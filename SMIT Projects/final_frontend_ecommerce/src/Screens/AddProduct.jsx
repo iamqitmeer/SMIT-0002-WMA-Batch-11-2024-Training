@@ -29,14 +29,6 @@ const AddProduct = () => {
     });
   }, []);
   let navigate = useNavigate();
-
-  useEffect(() => {
-    if (isUserSignIn && isUserSignIn.email === "admin@gmail.com") {
-    } else {
-      navigate("/");
-    }
-  }, []);
-
   const categories = [
     "Electronics",
     "Clothing",
