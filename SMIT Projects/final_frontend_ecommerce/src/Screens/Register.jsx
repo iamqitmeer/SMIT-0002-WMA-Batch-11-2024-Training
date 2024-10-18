@@ -16,7 +16,7 @@ function Register() {
 
   const navigate = useNavigate();
 
-  useEffect()
+  useEffect(() => {},[])
 
   const registerUser = () => {
     setLoader(true);
