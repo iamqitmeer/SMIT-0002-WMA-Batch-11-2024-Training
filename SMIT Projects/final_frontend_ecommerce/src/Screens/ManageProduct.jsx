@@ -1,6 +1,6 @@
 // src/ManageProducts.js
 import React, { useEffect, useState } from "react";
-import { db } from "../utils/firebase"; // Adjust the path to your firebase.js
+import { auth, db } from "../utils/firebase"; // Adjust the path to your firebase.js
 import {
   collection,
   deleteDoc,
@@ -11,6 +11,7 @@ import {
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { Button, Input, Textarea, Card, CardBody } from "@nextui-org/react"; // Import Next UI components
+import { onAuthStateChanged } from "firebase/auth";
 
 const ManageProducts = () => {
   const [products, setProducts] = useState([]);

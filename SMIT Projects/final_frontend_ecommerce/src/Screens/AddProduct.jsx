@@ -1,9 +1,10 @@
 import { Button, Select, SelectItem } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
-import { db, storage } from "../utils/firebase";
+import { auth, db, storage } from "../utils/firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
 
 const AddProduct = () => {
   const [title, setTitle] = useState("");
