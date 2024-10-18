@@ -1,14 +1,33 @@
 import { Button, Image } from "@nextui-org/react";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../utils/firebase";
+import { CartContext } from "../context/CartContext";
 function ProductDetailPage() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   let { id } = useParams();
   console.log(id);
+
+  let { cart, setCart } = useContext(CartContext);
+  // let [alreadyAdded, setAlreadyAdded] = useState(null);
+
+  let addToCart = () => {
+
+    const isProductInCart = cart.some(
+      (pro) => pro.id === product.id
+    );
+
+    if (isProductInCart) {
+      alert("Already Added In Cart");
+    } else {
+      let cloneArr = [...cart];
+      cloneArr.push(product);
+      setCart(cloneArr);
+    }
+  };
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -145,7 +164,7 @@ function ProductDetailPage() {
                     </svg>
                     Add to favorites
                   </Button>
-                  <Button variant="shadow" color="primary">
+                  <Button onClick={addToCart} variant="shadow" color="primary">
                     <svg
                       className="w-5 h-5 -ms-2"
                       aria-hidden="true"
