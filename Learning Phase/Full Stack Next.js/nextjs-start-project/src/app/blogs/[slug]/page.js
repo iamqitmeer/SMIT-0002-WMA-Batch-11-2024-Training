@@ -1,7 +1,8 @@
-import Link from "next/link";
+"use client";
+
 import React from "react";
 
-function blogs() {
+function BlogDetails({ params }) {
   const cricketers = [
     {
       name: "Babar Azam",
@@ -50,32 +51,26 @@ function blogs() {
       role: "Bowler",
       battingStyle: "Right-hand bat",
       bowlingStyle: "Right-arm fast",
-    },
-    {
-      name: "Shahid Afridi",
-      slug: "shahid-afridi",
-      country: "Pakistan",
-      role: "All-rounder",
-      battingStyle: "Right-hand bat",
-      bowlingStyle: "Right-arm leg-spin",
-    },
+    }
   ];
+
+  const cricketer = cricketers.find((cricketer) => cricketer.slug === params.slug);
+
   return (
-    <div className="flex items-center justify-center flex-col p-20 gap-4">
-      {cricketers.map((cricketer) => {
-        return (
-          <div>
-            <Link
-              className="text-zinc-900 border-2 border-zinc-900 text-xl font-bold hover:bg-zinc-900 hover:text-white p-2 px-3 rounded-lg m-4"
-              href={`/blogs/${cricketer.slug}`}
-            >
-              {cricketer.name}
-            </Link>
-          </div>
-        );
-      })}
+    <div>
+      {cricketer ? (
+        <div>
+          <h1>{cricketer.name}</h1>
+          <p>Country: {cricketer.country}</p>
+          <p>Role: {cricketer.role}</p>
+          <p>Batting Style: {cricketer.battingStyle}</p>
+          <p>Bowling Style: {cricketer.bowlingStyle}</p>
+        </div>
+      ) : (
+        <p>Cricketer not found.</p>
+      )}
     </div>
   );
 }
 
-export default blogs;
+export default BlogDetails;
