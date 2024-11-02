@@ -27,14 +27,7 @@ function blogs() {
       battingStyle: "Left-hand bat",
       bowlingStyle: "Left-arm fast",
     },
-    {
-      name: "Shahid Afridi",
-      slug: "shahid-afridi",
-      country: "Pakistan",
-      role: "All-rounder",
-      battingStyle: "Right-hand bat",
-      bowlingStyle: "Right-arm leg-spin",
-    },
+
     {
       name: "Shaheen Afridi",
       slug: "shaheen-afridi",
@@ -64,7 +57,7 @@ function blogs() {
     <div className="flex items-center justify-center flex-col p-20 gap-4">
       {cricketers.map((cricketer) => {
         return (
-          <div>
+          <div key={cricketer.slug}>
             <Link
               className="text-zinc-900 border-2 border-zinc-900 text-xl font-bold hover:bg-zinc-900 hover:text-white p-2 px-3 rounded-lg m-4"
               href={`/blogs/${cricketer.slug}`}
