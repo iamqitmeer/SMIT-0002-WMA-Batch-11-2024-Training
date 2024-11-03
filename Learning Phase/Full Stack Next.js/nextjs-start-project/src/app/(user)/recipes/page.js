@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-function blogs() {
+function recipes() {
   const cricketers = [
     {
       name: "Babar Azam",
@@ -60,7 +60,7 @@ function blogs() {
           <div key={cricketer.slug}>
             <Link
               className="text-zinc-900 border-2 border-zinc-900 text-xl font-bold hover:bg-zinc-900 hover:text-white p-2 px-3 rounded-lg m-4"
-              href={`/blogs/${cricketer.slug}`}
+              href={`/recipes/${cricketer.slug}`}
             >
               {cricketer.name}
             </Link>
@@ -71,4 +71,4 @@ function blogs() {
   );
 }
 
-export default blogs;
+export default recipes;

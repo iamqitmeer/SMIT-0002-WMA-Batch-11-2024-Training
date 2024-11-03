@@ -2,7 +2,7 @@
 
 import React from "react";
 
-function BlogDetails({ params }) {
+function RecipesDetails({ params }) {
   const cricketers = [
     {
       name: "Babar Azam",
@@ -76,4 +76,4 @@ function BlogDetails({ params }) {
   );
 }
 
-export default BlogDetails;
+export default RecipesDetails;
