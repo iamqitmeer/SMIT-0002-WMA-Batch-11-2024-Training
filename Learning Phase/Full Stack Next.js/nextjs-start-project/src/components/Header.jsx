@@ -16,6 +16,11 @@ function Header() {
             About
           </button>
         </Link>
+        <Link href="/todos">
+          <button className="text-white text-xl font-bold hover:bg-white hover:text-black p-2 px-3 rounded-lg">
+            Todos
+          </button>
+        </Link>
         <Link href="/recipes">
           <button className="text-white text-xl font-bold hover:bg-white hover:text-black p-2 px-3 rounded-lg">
             Recipes
