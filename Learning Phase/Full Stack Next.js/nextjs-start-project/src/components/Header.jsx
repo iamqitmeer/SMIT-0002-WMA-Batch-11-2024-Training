@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="bg-zinc-950 w-full h-20 flex items-center flex-wrap justify-center gap-40">
+    <div className="bg-zinc-950 w-full h-20 flex items-center justify-center gap-40">
      <Link href="/"><div className="text-zinc-100 font-bold text-3xl">Logo</div></Link>
       <div>
         <Link href="/">

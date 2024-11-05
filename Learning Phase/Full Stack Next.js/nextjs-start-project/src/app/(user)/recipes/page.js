@@ -1,13 +1,21 @@
 import Card from "@/components/Card";
-import Image from "next/image";
 import React from "react";
 
 export const metadata = {
   title: "Recipes",
 };
 
+export const revalidate = 10
+
 const Recipes = async () => {
-  let response = await fetch("https://dummyjson.com/recipes");
+  let response = await fetch("https://dummyjson.com/recipes", {
+    cache : "no-cache",
+  });
+
+  if (!response.ok) {
+    throw new Error("Bhaii API nhi chal rahi!")
+  }
+
   let data = await response.json();
   return (
     <div className="flex items-center justify-center flex-wrap gap-4 p-12 w-full h-screen">
