@@ -107,16 +107,7 @@ export default function Header() {
             ""
           ) : (
             <NavLink to="/cart">
-              <Badge content={cart.length} color="primary" variant="solid">
-                <Button
-                  isIconOnly
-                  color="primary"
-                  variant="flat"
-                  aria-label="Cart"
-                >
-                  <i className="ri-shopping-cart-fill text-lg"></i>
-                </Button>
-              </Badge>
+          <p>Cart ({cart.length})</p>
             </NavLink>
           )}
         </NavbarItem>

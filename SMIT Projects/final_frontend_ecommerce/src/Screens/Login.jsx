@@ -25,7 +25,7 @@ function Login() {
         navigate("/");
       })
       .catch((err) => {
-        console.log(err);
+        alert(err);
         setLoader(false);
       });
   };
@@ -123,8 +123,13 @@ function Login() {
                 {/* Admin Login Details */}
                 <div className="mt-4  text-sm font-light text-gray-500 dark:text-gray-400">
                   <p className="font-bold">For Admin Login:</p>
-                  <p>Email: <strong className="font-bold">admin@gmail.com</strong></p>
-                  <p>Password: <strong className="font-bold">123456</strong></p>
+                  <p>
+                    Email:{" "}
+                    <strong className="font-bold">admin@gmail.com</strong>
+                  </p>
+                  <p>
+                    Password: <strong className="font-bold">123456</strong>
+                  </p>
                 </div>
               </form>
             </div>
