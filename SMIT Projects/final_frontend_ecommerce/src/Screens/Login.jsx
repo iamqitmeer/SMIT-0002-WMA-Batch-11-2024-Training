@@ -19,13 +19,10 @@ function Login() {
     signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
         console.log(user);
-
         setEmail("");
         setPassword("");
         setLoader(false);
-
-        navigate("/")
-
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
@@ -49,7 +46,7 @@ function Login() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   variant="bordered"
-                  className="w-ful"
+                  className="w-full"
                 />
                 <Input
                   label="Password"
@@ -64,9 +61,9 @@ function Login() {
                       aria-label="toggle password visibility"
                     >
                       {isVisible ? (
-                        <i class="ri-eye-fill text-2xl text-default-400 pointer-events-none"></i>
+                        <i className="ri-eye-fill text-2xl text-default-400 pointer-events-none"></i>
                       ) : (
-                        <i class="ri-eye-off-line text-2xl text-default-400 pointer-events-none"></i>
+                        <i className="ri-eye-off-line text-2xl text-default-400 pointer-events-none"></i>
                       )}
                     </button>
                   }
@@ -122,6 +119,13 @@ function Login() {
                     Sign Up
                   </NavLink>
                 </p>
+
+                {/* Admin Login Details */}
+                <div className="mt-4  text-sm font-light text-gray-500 dark:text-gray-400">
+                  <p className="font-bold">For Admin Login:</p>
+                  <p>Email: <strong className="font-bold">admin@gmail.com</strong></p>
+                  <p>Password: <strong className="font-bold">123456</strong></p>
+                </div>
               </form>
             </div>
           </div>
