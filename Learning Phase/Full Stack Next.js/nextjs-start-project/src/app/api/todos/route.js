@@ -1,4 +1,4 @@
-const todos = [];
+const todos = []
 
 export async function GET() {
   return Response.json({ statusCode: "404", todos });
