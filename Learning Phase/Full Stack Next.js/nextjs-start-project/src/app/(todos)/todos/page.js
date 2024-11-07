@@ -4,7 +4,7 @@ import { addTodo } from "@/actions/todos";
 
 async function Todos() {
   let res = await fetch("http://localhost:3000/api/todos", {
-    cache:"no-cache"
+    cache: "no-cache"
   });
   res = await res.json();
 
@@ -21,7 +21,7 @@ async function Todos() {
             className="flex-1 p-3 border border-zinc-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-zinc-800 bg-zinc-800"
           />
           <input type="submit" className="cursor-pointer bg-blue-500 text-white font-semibold px-4 rounded-r-lg hover:bg-blue-600 transition duration-200" value="Add Todo" />
-            
+
         </form>
 
         <ul className="space-y-3">

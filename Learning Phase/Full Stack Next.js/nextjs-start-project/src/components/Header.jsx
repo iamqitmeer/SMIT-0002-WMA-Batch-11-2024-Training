@@ -4,7 +4,9 @@ import React from "react";
 function Header() {
   return (
     <div className="bg-zinc-950 w-full h-20 flex items-center justify-center gap-40">
-     <Link href="/"><div className="text-zinc-100 font-bold text-3xl">Logo</div></Link>
+      <Link href="/">
+        <div className="text-zinc-100 font-bold text-3xl">Logo</div>
+      </Link>
       <div>
         <Link href="/">
           <button className="text-white text-xl font-bold hover:bg-white hover:text-black p-2 px-3 rounded-lg">
