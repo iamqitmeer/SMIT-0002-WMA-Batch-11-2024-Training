@@ -7,8 +7,8 @@ export async function GET() {
 export async function POST(request) {
   let data = await request.json();
   let obj = {
-    ...data,
     completed: false,
+    ...data,
     id: todos.length + 1,
   };
   todos.push(obj);
