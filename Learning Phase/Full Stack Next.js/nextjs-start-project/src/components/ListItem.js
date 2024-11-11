@@ -3,7 +3,6 @@
 import { deleteTodo, updateTodo } from "@/actions/todos"
 import { useState } from "react"
 
-
 function ListItem({ todo }) {
 
     let [isEdit, setIsEdit] = useState(false)
@@ -14,9 +13,7 @@ function ListItem({ todo }) {
             let obj = { ...todo }
             obj.title = isEditedValue
             await updateTodo(obj)
-
             setIsEdit(false)
-
         } else {
             setIsEdit(true)
             setEditedValue(todo.title)
@@ -33,34 +30,33 @@ function ListItem({ todo }) {
     }
 
     return (
-        <li className="flex cursor-pointer items-center justify-between p-3 border border-zinc-700 rounded-lg bg-zinc-800 transition duration-200">
-            <div className="flex items-center">
+        <li className="flex flex-col sm:flex-row cursor-pointer items-center justify-between p-4 border border-zinc-700 rounded-lg bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 shadow-lg transition duration-200 hover:shadow-xl mb-4">
+            <div className="flex items-center flex-grow mb-3 sm:mb-0 sm:mr-4">
                 {isEdit ? (
                     <input
-                        className={`${todo.completed ? "line-through text-gray-400" : "text-gray-200"} text-white bg-transparent border-2 text-xl border-white`}
+                        className={`text-white bg-transparent border-b-2 border-white text-xl p-2 focus:outline-none ${todo.completed ? "line-through text-gray-400" : "text-white"}`}
                         value={isEditedValue}
                         onChange={(e) => setEditedValue(e.target.value)}
                     />
                 ) : (
-                    <span className={`${todo.completed ? "line-through text-gray-400" : "text-gray-200"}`}>
+                    <span className={`text-lg sm:text-xl font-medium ${todo.completed ? "line-through text-gray-400" : "text-gray-200"}`}>
                         {todo.title}
                     </span>
                 )}
-
-
             </div>
-            <div>
-                <button onClick={onIsComplete} className="bg-blue-500 text-white font-semibold px-3 py-1 rounded hover:bg-blue-600 transition duration-200 mr-2">
-                    {todo.completed ? "Cancel" : "Done"}
+            <div className="flex space-x-2">
+                <button onClick={onIsComplete} className={`px-4 py-2 rounded-lg font-semibold shadow-md text-white transition transform hover:scale-105 ${todo.completed ? "bg-green-500 hover:bg-green-600" : "bg-blue-500 hover:bg-blue-600"}`}>
+                    {todo.completed ? "Undo" : "Done"}
                 </button>
-                <button onClick={onEdit} className="bg-yellow-500 text-white font-semibold px-3 py-1 rounded hover:bg-yellow-600 transition duration-200 mr-2">
+                <button onClick={onEdit} className="px-4 py-2 rounded-lg font-semibold shadow-md bg-yellow-500 text-white transition transform hover:scale-105 hover:bg-yellow-600">
                     Edit
                 </button>
-                <button onClick={onDelete} className="bg-red-500 text-white font-semibold px-3 py-1 rounded hover:bg-red-600 transition duration-200">
+                <button onClick={onDelete} className="px-4 py-2 rounded-lg font-semibold shadow-md bg-red-500 text-white transition transform hover:scale-105 hover:bg-red-600">
                     Delete
                 </button>
             </div>
-        </li>)
+        </li>
+    )
 }
 
 export default ListItem
