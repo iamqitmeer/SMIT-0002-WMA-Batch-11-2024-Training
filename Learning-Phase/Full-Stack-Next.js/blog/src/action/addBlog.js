@@ -1,6 +1,7 @@
 "use server"
 
 import { revalidatePath } from "next/cache"
+import { redirect } from "next/navigation"
 
 export default async function addBlog(formData) {
     let obj = {
@@ -15,4 +16,5 @@ export default async function addBlog(formData) {
     })
     revalidatePath("/add-blog")
     revalidatePath("/")
+    redirect("/")
 }

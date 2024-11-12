@@ -18,12 +18,7 @@ export default function AddBlogPage() {
 
   return (
     <div className="min-h-screen bg-background p-8">
-      <Link href="/">
-        <Button variant="ghost" className="mb-4">
-          <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Dashboard
-        </Button>
-      </Link>
+  
       <Card className="mx-auto max-w-2xl">
         <CardHeader>
           <CardTitle className="text-2xl">Add New Blog Post</CardTitle>
