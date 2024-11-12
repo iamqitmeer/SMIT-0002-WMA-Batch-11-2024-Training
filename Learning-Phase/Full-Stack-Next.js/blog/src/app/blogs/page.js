@@ -15,14 +15,17 @@ export default async function blogs() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center">My Blog</h1>
-      <div className="text-center m-4">
+      <div className="flex w-full justify-between">
+
+      <h1 className="text-xl font-bold text-center">My Blog</h1>
+      <div className="text-center mb-3">
         <Link href="/add-blog">
           <Button size="lg">
-            <PlusCircle className="mr-2 h-5 w-5" />
-            Add Blogs
+            <PlusCircle className=" h-7 w-7" />
+            <p className="text-lg font-bold">Add Blogs</p>
           </Button>
         </Link>
+      </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
