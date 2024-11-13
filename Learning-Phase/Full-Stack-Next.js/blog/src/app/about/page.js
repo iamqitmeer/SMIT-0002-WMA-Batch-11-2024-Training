@@ -30,7 +30,7 @@ export default function Component() {
             <Button
               variant="outline"
               size="lg"
-              className="rounded-full text-white border-white hover:bg-white text-zinc-900"
+              className="rounded-full border-white hover:bg-white text-zinc-900"
             >
               Our Story <ChevronDown className="ml-2 h-4 w-4" />
             </Button>

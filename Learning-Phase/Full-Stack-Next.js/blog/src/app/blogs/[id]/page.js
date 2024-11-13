@@ -21,7 +21,6 @@ async function BlogPost({ params }) {
 
   const blog = await response.json();
 
-  // Conditional rendering if blog data is missing (likely after deletion)
   if (!blog) {
     return <p>Loading...</p>;
   }
