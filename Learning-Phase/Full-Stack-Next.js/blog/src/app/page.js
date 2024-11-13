@@ -9,7 +9,7 @@ export default function LandingPage() {
     
 
       <main className="flex-grow">
-        <section className="py-20 bg-zinc-100">
+        <section className="p-20 bg-zinc-100">
           <div className="container text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-zinc-900">
               Welcome to <span className="text-zinc-700">BlogApp</span>
@@ -36,7 +36,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="p-20">
           <div className="container">
             <h2 className="text-3xl font-bold text-center mb-12 text-zinc-900">
               Why Choose BlogApp?
@@ -61,7 +61,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-zinc-100">
+        <section className="p-20 bg-zinc-100">
           <div className="container">
             <h2 className="text-3xl font-bold text-center mb-8 text-zinc-900">
               Stay Updated

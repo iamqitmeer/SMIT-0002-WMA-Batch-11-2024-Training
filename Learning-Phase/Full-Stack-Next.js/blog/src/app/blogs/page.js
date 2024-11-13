@@ -4,14 +4,16 @@ import { PlusCircle } from "lucide-react"
 import Link from "next/link"
 
 export default async function blogs() {
-
+  let blogs = [];
+  try {
     let response = await fetch("http://localhost:3000/api/blogs", {
       cache: "no-cache",
     });
-
-   let blogs = await response.json();
-
-
+    blogs = await response.json();
+  } catch (error) {
+    console.error("Failed to parse JSON:", error);
+  }
+  
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -29,14 +31,15 @@ export default async function blogs() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {blogs.data.length > 0 ? (
-          blogs.data.map((blog, index) => (
-            <BlogCard key={blog._id} blog={blog} />
-          ))
-        ) : (
-          <p className="text-center text-gray-500">No blogs available.</p>
-        )}
-      </div>
+  {blogs && blogs.data && blogs.data.length > 0 ? (
+    blogs.data.map((blog) => (
+      <BlogCard key={blog._id} blog={blog} />
+    ))
+  ) : (
+    <p>No blogs available.</p>
+  )}
+</div>
+
     </div>
   );
 }

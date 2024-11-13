@@ -10,10 +10,10 @@ export default function Component() {
     
 
       <main className="flex-grow">
-        <section className="relative py-20 overflow-hidden">
+        <section className="relative p-20 overflow-hidden">
           <div className="absolute inset-0 bg-zinc-900">
             <Image
-              src="/placeholder.svg?height=600&width=1200"
+              src="https://images.unsplash.com/photo-1589922656942-bf8a07244fa1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Team collaboration"
               layout="fill"
               objectFit="cover"
@@ -30,14 +30,14 @@ export default function Component() {
             <Button
               variant="outline"
               size="lg"
-              className="rounded-full text-white border-white hover:bg-white hover:text-zinc-900"
+              className="rounded-full text-white border-white hover:bg-white text-zinc-900"
             >
               Our Story <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="p-20">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
@@ -71,7 +71,7 @@ export default function Component() {
           </div>
         </section>
 
-        <section className="py-20 bg-zinc-100">
+        <section className="p-20 bg-zinc-100">
           <div className="container">
             <h2 className="text-3xl font-bold text-center mb-12 text-zinc-900">
               Our Values
@@ -117,7 +117,7 @@ export default function Component() {
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="p-20">
           <div className="container">
             <h2 className="text-3xl font-bold text-center mb-12 text-zinc-900">
               Meet Our Team
@@ -126,7 +126,7 @@ export default function Component() {
               <div className="text-center">
                 <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1448&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Alex Johnson"
                     layout="fill"
                     objectFit="cover"
@@ -152,7 +152,7 @@ export default function Component() {
               <div className="text-center">
                 <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Samantha Lee"
                     layout="fill"
                     objectFit="cover"
@@ -178,7 +178,7 @@ export default function Component() {
               <div className="text-center">
                 <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Michael Chen"
                     layout="fill"
                     objectFit="cover"
@@ -205,7 +205,7 @@ export default function Component() {
           </div>
         </section>
 
-        <section className="py-20 bg-zinc-900 text-white">
+        <section className="p-20 bg-zinc-900 text-white">
           <div className="container text-center">
             <h2 className="text-3xl font-bold mb-6">Join Us on Our Journey</h2>
             <p className="text-xl max-w-3xl mx-auto mb-8">
