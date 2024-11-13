@@ -51,7 +51,7 @@ export default function Component() {
                   communities can grow.
                 </p>
                 <p className="text-zinc-600 mb-4">
-                  We're committed to fostering an environment of creativity,
+                  We,re committed to fostering an environment of creativity,
                   authenticity, and meaningful connections. Through our
                   innovative tools and supportive community, we aim to make
                   blogging accessible and impactful for everyone.

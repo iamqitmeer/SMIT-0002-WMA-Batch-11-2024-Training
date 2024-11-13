@@ -46,7 +46,7 @@ export default function AddBlogPage() {
               <Input
                 name="author"
                 id="author"
-                placeholder="Enter the author's name"
+                placeholder="Enter the author-s name"
                 required
               />
             </div>
