@@ -18,7 +18,7 @@ export default function AddBlogPage() {
   
       <Card className="mx-auto max-w-2xl">
         <CardHeader>
-          <CardTitle className="text-2xl">Add New Blog Post</CardTitle>
+          <CardTitle className="text-2xl">Add New Blog Post.</CardTitle>
         </CardHeader>
         <form action={addBlog}>
           <CardContent className="space-y-4">
