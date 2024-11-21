@@ -39,7 +39,6 @@ function Buttons({ id }) {
     });
     const blog = await response.json();
   }
-
   getDataFromAPI();
 
   async function handleDeleteBTN() {
