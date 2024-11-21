@@ -38,10 +38,6 @@ async function Buttons({ id }) {
   });
 
   const blog = await response.json();
-  
-  // let [editedText, setEditedText] = useState()
-
-  
 
   async function handleDeleteBTN() {
     await deleteBlog(id);
@@ -50,7 +46,6 @@ async function Buttons({ id }) {
 
   return (
     <div className="flex space-x-2">
-      {/* Edit Button */}
       <Button
         variant="outline"
         size="icon"
@@ -60,26 +55,19 @@ async function Buttons({ id }) {
         <span className="sr-only">Edit</span>
       </Button>
 
-      {/* Drawer for Editing */}
       <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
         <DrawerContent>
           <DrawerHeader>
             <DrawerTitle>Edit Blog</DrawerTitle>
             <DrawerDescription>
-              Update your blog information here. Click "Update Blog" when you're
-              done.
+              Update your blog information here. Click "Update Blog" when
+              you&apos;re done.
             </DrawerDescription>
           </DrawerHeader>
           <EditBlogForm />
-          {/* <DrawerFooter>
-            <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
-            </DrawerClose>
-          </DrawerFooter> */}
         </DrawerContent>
       </Drawer>
 
-      {/* Delete Button with Confirmation Dialog */}
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button variant="outline" size="icon">
@@ -110,11 +98,10 @@ async function Buttons({ id }) {
 function EditBlogForm() {
   return (
     <form className="grid gap-4 p-4">
-      {/* Title Input */}
       <div className="grid gap-2">
         <Label htmlFor="title">Title</Label>
         <Input
-        value={blog.title}
+          value={blog.title}
           type="text"
           name="title"
           id="title"
@@ -127,8 +114,7 @@ function EditBlogForm() {
         <Textarea
           type="text"
           name="description"
-        value={blog.description}
-
+          value={blog.description}
           id="content"
           placeholder="Enter blog content"
         />
@@ -139,8 +125,7 @@ function EditBlogForm() {
         <Input
           type="text"
           name="author"
-        value={blog.author}
-
+          value={blog.author}
           id="author"
           placeholder="Enter author name"
         />

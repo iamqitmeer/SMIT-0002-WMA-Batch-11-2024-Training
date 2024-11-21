@@ -209,7 +209,7 @@ export default function Component() {
           <div className="container text-center">
             <h2 className="text-3xl font-bold mb-6">Join Us on Our Journey</h2>
             <p className="text-xl max-w-3xl mx-auto mb-8">
-              Be part of a community that's shaping the future of digital
+              Be part of a community that&apos;s shaping the future of digital
               storytelling. Start your blogging adventure with us today.
             </p>
             <Button

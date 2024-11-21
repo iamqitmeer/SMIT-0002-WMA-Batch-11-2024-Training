@@ -45,12 +45,11 @@ function EditBtn({ blog, id }) {
           <DrawerHeader>
             <DrawerTitle>Edit Blog</DrawerTitle>
             <DrawerDescription>
-              Update your blog information here. Click "Update Blog" when you're
+              Update your blog information here. Click "Update Blog" when you&apos;re
               done.
             </DrawerDescription>
           </DrawerHeader>
           <form action={handleSubmit} className="grid gap-4 p-4">
-            {/* Title Input */}
             <div className="grid gap-2">
               <Label htmlFor="title">Title</Label>
               <Input
@@ -97,11 +96,7 @@ function EditBtn({ blog, id }) {
               Update Blog
             </Button>
           </form>{" "}
-          {/* <DrawerFooter>
-    <DrawerClose asChild>
-      <Button variant="outline">Cancel</Button>
-    </DrawerClose>
-  </DrawerFooter> */}
+      
         </DrawerContent>
       </Drawer>{" "}
     </>
