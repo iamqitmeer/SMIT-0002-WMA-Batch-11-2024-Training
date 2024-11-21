@@ -6,7 +6,7 @@ import Link from "next/link";
 export default async function blogs() {
   let blogs = [];
   try {
-    let response = await fetch(`${process.env.BASE_URL}/api/blogs`, {
+    let response = await fetch(`https://blog-by-qitmeer.vercel.app/api/blogs`, {
       cache: "no-cache",
     });
     blogs = await response.json();

@@ -34,9 +34,12 @@ function Buttons({ id }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   async function apiCall() {
-    const response = await fetch(`${process.env.BASE_URL}/api/blogs/${id}`, {
-      cache: "no-cache",
-    });
+    const response = await fetch(
+      `https://blog-by-qitmeer.vercel.app/api/blogs/${id}`,
+      {
+        cache: "no-cache",
+      }
+    );
     const blog = await response.json();
   }
 
