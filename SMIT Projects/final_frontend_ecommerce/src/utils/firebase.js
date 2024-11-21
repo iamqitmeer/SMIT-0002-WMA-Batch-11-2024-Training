@@ -3,6 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage"; // Import Storage
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCQn4bEKZ0zEp8RLcEjLszwUDQUTo79oCM",
   authDomain: "react-ecommerce-eaa74.firebaseapp.com",
