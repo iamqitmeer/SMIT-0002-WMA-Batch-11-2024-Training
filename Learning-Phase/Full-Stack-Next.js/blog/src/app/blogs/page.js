@@ -6,7 +6,7 @@ import Link from "next/link";
 export default async function blogs() {
   let blogs = [];
   try {
-    let response = await fetch("http://localhost:3000/api/blogs", {
+    let response = await fetch(`${process.env.BASE_URL}/api/blogs`, {
       cache: "no-cache",
     });
     blogs = await response.json();
