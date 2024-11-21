@@ -29,14 +29,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "./ui/textarea";
 
-async function Buttons({ id }) {
+function Buttons({ id }) {
   const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
+  async function apiCall() {
     const response = await fetch(`${process.env.BASE_URL}/api/blogs/${id}`, {
       cache: "no-cache",
     });
     const blog = await response.json();
+  }
+
+  apiCall();
 
   async function handleDeleteBTN() {
     await deleteBlog(id);
