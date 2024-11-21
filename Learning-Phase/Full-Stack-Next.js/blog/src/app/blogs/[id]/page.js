@@ -15,7 +15,7 @@ import EditBtn from "@/components/buttons/EditBtn";
 import DeleteBtn from "@/components/buttons/DeleteBtn";
 
 async function BlogPost({ params }) {
-  const response = await fetch(`https://blog-by-qitmeer.vercel.app/api/blogs/${params.id}`, {
+  const response = await fetch(`${process.env.BASE_URL}/api/blogs/${params.id}`, {
     cache: "no-cache",
   });
 

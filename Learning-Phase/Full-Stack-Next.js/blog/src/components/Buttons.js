@@ -28,18 +28,14 @@ import { deleteBlog } from "@/action/addBlog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "./ui/textarea";
-
 function Buttons({ id }) {
   const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   async function apiCall() {
-    const response = await fetch(
-      `https://blog-by-qitmeer.vercel.app/api/blogs/${id}`,
-      {
-        cache: "no-cache",
-      }
-    );
+    const response = await fetch(`${process.env.BASE_URL}/api/blogs/${id}`, {
+      cache: "no-cache",
+    });
     const blog = await response.json();
   }
 

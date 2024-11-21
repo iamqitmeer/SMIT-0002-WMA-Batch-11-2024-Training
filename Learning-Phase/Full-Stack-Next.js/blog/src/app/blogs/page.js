@@ -6,13 +6,15 @@ import Link from "next/link";
 export default async function blogs() {
   let blogs = [];
   try {
-    let response = await fetch(`https://blog-by-qitmeer.vercel.app/api/blogs`, {
+    let response = await fetch(`${process.env.BASE_URL}/api/blogs`, {
       cache: "no-cache",
     });
     blogs = await response.json();
   } catch (error) {
     console.error("Failed to parse JSON:", error);
   }
+
+  console.log("process.env.BASE_URL ----> ", process.env.BASE_URL);
 
   return (
     <div className="container mx-auto px-4 py-8">

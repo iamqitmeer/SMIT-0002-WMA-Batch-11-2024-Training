@@ -10,7 +10,7 @@ export async function addBlog(formData) {
     author: formData.get("author"),
   };
 
-  await fetch(`https://blog-by-qitmeer.vercel.app/api/blogs`, {
+  await fetch(`${process.env.BASE_URL}api/blogs`, {
     method: "POST",
     body: JSON.stringify(obj),
   });
@@ -20,7 +20,7 @@ export async function addBlog(formData) {
 
 export async function deleteBlog(id) {
   try {
-    await fetch(`https://blog-by-qitmeer.vercel.app/api/blogs/${id}`, {
+    await fetch(`${process.env.BASE_URL}api/blogs/${id}`, {
       method: "DELETE",
     });
     revalidatePath("/blog");
@@ -36,12 +36,13 @@ export async function updateBlog(editBlogText, id) {
   };
 
   try {
-    await fetch(`https://blog-by-qitmeer.vercel.app/api/blogs/${id}`, {
+    await fetch(`${process.env.BASE_URL}api/blogs/${id}`, {
       method: "PUT",
       body: JSON.stringify(obj),
     });
 
-    revalidatePath(`/blogs/${id}`);
-    revalidatePath(`/blogs`);
-  } catch (error) {}
+    revalidatePath(`/blogs/${id}`)
+    revalidatePath(`/blogs`)
+
+} catch (error) {}
 }
