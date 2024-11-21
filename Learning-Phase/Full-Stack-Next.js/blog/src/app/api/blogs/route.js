@@ -1,6 +1,7 @@
 import connectDB from "@/app/lib/dbconnect"
 import BlogModal from "@/app/lib/modals/BlogModals";
 
+
 export async function GET(request) {
     await connectDB() 
     const blog = await BlogModal.find()
