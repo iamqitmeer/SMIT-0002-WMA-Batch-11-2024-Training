@@ -21,13 +21,12 @@ function EditBtn({ blog, id }) {
   let [editBlogText, setEditBlogText] = useState({ ...blog, id });
 
   async function handleSubmit() {
-      try {
-        await updateBlog({ ...editBlogText }, id);
-        setTimeout(() => setIsDrawerOpen(false), 100); 
-      } catch (error) {
-        console.error("Error updating blog:", error);
-      }
-  
+    try {
+      await updateBlog({ ...editBlogText }, id);
+      setTimeout(() => setIsDrawerOpen(false), 100);
+    } catch (error) {
+      console.error("Error updating blog:", error);
+    }
   }
 
   return (
@@ -45,8 +44,8 @@ function EditBtn({ blog, id }) {
           <DrawerHeader>
             <DrawerTitle>Edit Blog</DrawerTitle>
             <DrawerDescription>
-              Update your blog information here. Click "Update Blog" when you&apos;re
-              done.
+              Update your blog information here. Click "Update Blog" when
+              you&apos;re done.
             </DrawerDescription>
           </DrawerHeader>
           <form action={handleSubmit} className="grid gap-4 p-4">
@@ -96,7 +95,6 @@ function EditBtn({ blog, id }) {
               Update Blog
             </Button>
           </form>{" "}
-      
         </DrawerContent>
       </Drawer>{" "}
     </>

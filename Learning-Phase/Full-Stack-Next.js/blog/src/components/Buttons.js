@@ -29,15 +29,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "./ui/textarea";
 
-async function Buttons({ id }) {
+function Buttons({ id }) {
   const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const response = await fetch(`http://localhost:3000/api/blogs/${id}`, {
-    cache: "no-cache",
-  });
+  async function getDataFromAPI() {
+    const response = await fetch(`http://localhost:3000/api/blogs/${id}`, {
+      cache: "no-cache",
+    });
+    const blog = await response.json();
+  }
 
-  const blog = await response.json();
+  getDataFromAPI();
 
   async function handleDeleteBTN() {
     await deleteBlog(id);
