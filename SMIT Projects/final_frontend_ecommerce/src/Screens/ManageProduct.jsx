@@ -105,7 +105,7 @@ const ManageProducts = () => {
         onClick={() => navigate("/add_product")}
         className="mb-4"
         size="lg"
-        color="success"
+        color="primary"
       >
         Add New Product
       </Button>

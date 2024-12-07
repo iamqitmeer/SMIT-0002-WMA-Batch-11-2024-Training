@@ -10,14 +10,11 @@ function Cart() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Get current user from Firebase auth
     const user = auth.currentUser;
 
-    // If the user is an admin, redirect them to another page
     if (user && user.email === "admin@gmail.com") {
       navigate("/add_product");
     } else {
-      // Calculate total price whenever the cart changes
       setTotalPrice(cart.reduce((total, product) => total + product.price, 0));
     }
   }, [cart, navigate]);
@@ -41,7 +38,10 @@ function Cart() {
                 <div>Your cart is empty.</div>
               ) : (
                 cart.map((product, index) => (
-                  <div key={index} className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
+                  <div
+                    key={index}
+                    className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6"
+                  >
                     <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                       <div className="w-20 shrink-0 md:order-1">
                         <img
@@ -55,7 +55,9 @@ function Cart() {
                           {product.title}
                         </a>
                         <div className="flex items-center justify-between gap-4">
-                          <p className="text-base font-bold text-gray-900 dark:text-white">${product.price}</p>
+                          <p className="text-base font-bold text-gray-900 dark:text-white">
+                            ${product.price}
+                          </p>
                           <div className="flex items-center gap-4">
                             <button
                               onClick={() => deleteCartItem(index)}
@@ -93,34 +95,57 @@ function Cart() {
 
           <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
             <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
-              <p className="text-xl font-semibold text-gray-900 dark:text-white">Order Summary</p>
+              <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                Order Summary
+              </p>
 
               <div className="space-y-4">
                 <div className="space-y-2">
                   <dl className="flex items-center justify-between gap-4">
-                    <dt className="text-base font-normal text-gray-500 dark:text-gray-400">Original price</dt>
-                    <dd className="text-base font-medium text-gray-900 dark:text-white">${Math.floor(totalPrice)}</dd>
+                    <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
+                      Original price
+                    </dt>
+                    <dd className="text-base font-medium text-gray-900 dark:text-white">
+                      ${Math.floor(totalPrice)}
+                    </dd>
                   </dl>
 
                   <dl className="flex items-center justify-between gap-4">
-                    <dt className="text-base font-normal text-gray-500 dark:text-gray-400">Store Pickup</dt>
-                    <dd className="text-base font-medium text-gray-900 dark:text-white">${storePickup}</dd>
+                    <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
+                      Store Pickup
+                    </dt>
+                    <dd className="text-base font-medium text-gray-900 dark:text-white">
+                      ${storePickup}
+                    </dd>
                   </dl>
 
                   <dl className="flex items-center justify-between gap-4">
-                    <dt className="text-base font-normal text-gray-500 dark:text-gray-400">Tax</dt>
-                    <dd className="text-base font-medium text-gray-900 dark:text-white">${tax}</dd>
+                    <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
+                      Tax
+                    </dt>
+                    <dd className="text-base font-medium text-gray-900 dark:text-white">
+                      ${tax}
+                    </dd>
                   </dl>
                 </div>
 
                 <dl className="flex items-center justify-between gap-4 border-t border-gray-200 pt-4 text-gray-900 dark:border-gray-700 dark:text-white">
                   <dt className="text-base font-semibold">Total</dt>
-                  <dd className="text-base font-semibold">${Math.floor(totalPrice + storePickup + tax)}</dd>
+                  <dd className="text-base font-semibold">
+                    ${totalPrice ? Math.floor(totalPrice + storePickup + tax) : 0}
+                  </dd>
                 </dl>
               </div>
 
               <Link to="/checkout">
-                <Button isFullWidth>Proceed to checkout</Button>
+                <Button
+                  className={`mt-4 w-full ${
+                    cart.length !== 0 ? "bg-blue-500" : "bg-gray-200"
+                  }`}
+                  disabled={cart.length == 0}
+                >
+                  Proceed to checkout
+                </Button>
               </Link>
             </div>
           </div>

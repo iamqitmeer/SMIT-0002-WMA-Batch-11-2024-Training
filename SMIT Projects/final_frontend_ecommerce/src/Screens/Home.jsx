@@ -5,51 +5,48 @@ import { Link, NavLink } from "react-router-dom";
 function Home() {
   return (
     <>
-  <section className="bg-white p-8 sm:p-12 md:p-16 lg:p-24 antialiased dark:bg-gray-900">
-  <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 px-4 pb-8 lg:pb-16 xl:gap-20">
-    <div className="content-center justify-self-start md:col-span-7 text-center md:text-left">
-      <h1 className="mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight dark:text-white">
-        Limited Time Offer!
-        <br />
-        Up to 50% OFF!
-      </h1>
-      <p className="mb-4 max-w-2xl text-gray-500 dark:text-gray-400 md:mb-8 text-base sm:text-lg lg:text-xl">
-        Don't Wait - Limited Stock at Unbeatable Prices!
-      </p>
-      <div className="flex flex-col sm:flex-row items-center gap-3 justify-center md:justify-start">
-        <Button
-          variant="shadow"
-          color="primary"
-          className="w-full sm:w-auto py-3 sm:py-4 px-5 sm:px-7 font-bold"
-        >
-          Download Resume
-        </Button>
-        <Button
-          variant="bordered"
-          color="primary"
-          className="w-full sm:w-auto py-3 sm:py-4 px-5 sm:px-7 font-semibold"
-        >
-          View Developer Github Profile
-        </Button>
-      </div>
-    </div>
-    <div className="hidden md:col-span-5 md:mt-0 md:flex justify-center items-center">
-      <img
-        className="dark:hidden w-full md:w-auto max-w-xs lg:max-w-md"
-        src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/girl-shopping-list.svg"
-        alt="shopping illustration"
-      />
-      <img
-        className="hidden dark:block w-full md:w-auto max-w-xs lg:max-w-md"
-        src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/girl-shopping-list-dark.svg"
-        alt="shopping illustration"
-      />
-    </div>
-  </div>
-</section>
-
-
-    
+      <section className="bg-white p-8 sm:p-12 md:p-16 lg:p-24 antialiased dark:bg-gray-900">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 px-4 pb-8 lg:pb-16 xl:gap-20">
+          <div className="content-center justify-self-start md:col-span-7 text-center md:text-left">
+            <h1 className="mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight dark:text-white">
+              Limited Time Offer!
+              <br />
+              Up to 50% OFF!
+            </h1>
+            <p className="mb-4 max-w-2xl text-gray-500 dark:text-gray-400 md:mb-8 text-base sm:text-lg lg:text-xl">
+              Don't Wait - Limited Stock at Unbeatable Prices!
+            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-3 justify-center md:justify-start">
+              <Button
+                variant="shadow"
+                color="primary"
+                className="w-full sm:w-auto py-3 sm:py-4 px-5 sm:px-7 font-bold"
+              >
+                Download Resume
+              </Button>
+              <Button
+                variant="bordered"
+                color="primary"
+                className="w-full sm:w-auto py-3 sm:py-4 px-5 sm:px-7 font-semibold"
+              >
+                View Developer Github Profile
+              </Button>
+            </div>
+          </div>
+          <div className="hidden md:col-span-5 md:mt-0 md:flex justify-center items-center">
+            <img
+              className="dark:hidden w-full md:w-auto max-w-xs lg:max-w-md"
+              src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/girl-shopping-list.svg"
+              alt="shopping illustration"
+            />
+            <img
+              className="hidden dark:block w-full md:w-auto max-w-xs lg:max-w-md"
+              src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/girl-shopping-list-dark.svg"
+              alt="shopping illustration"
+            />
+          </div>
+        </div>
+      </section>
 
       <footer className="bg-white antialiased dark:bg-gray-800">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
